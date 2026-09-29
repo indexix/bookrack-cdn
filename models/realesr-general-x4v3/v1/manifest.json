@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "modelId": "realesr-general-x4v3",
+  "version": "v1",
+  "contract": "rgb-2x-general-v1",
+  "source": "https://github.com/xinntao/Real-ESRGAN",
+  "checkpointSha256": "8dc7edb9ac80ccdc30c3a5dca6616509367f05fbc184ad95b731f05bece96292",
+  "license": "BSD-3-Clause",
+  "runtimeVersions": {
+    "ncnn": "20260526",
+    "litert": "2.2.0",
+    "snpe": "QAIRT 2.47",
+    "rknn": "2.3.2"
+  },
+  "files": [
+    {
+      "name": "realesr-general-x4v3.param",
+      "bytes": 3115,
+      "sha256": "0406688348b2a5a002cee15cd103145856f203cd7fcc8a97037265326656b8dd",
+      "runtime": "ncnn",
+      "tile": null,
+      "target": null
+    },
+    {
+      "name": "realesr-general-x4v3.bin",
+      "bytes": 4853320,
+      "sha256": "bfdfaebf0b26be9442faa30b8cec617fe04a808ae2aa3616ece85b92d81ae0ce",
+      "runtime": "ncnn",
+      "tile": null,
+      "target": null
+    },
+    {
+      "name": "realesr-general-x4v3.tflite",
+      "bytes": 4807016,
+      "sha256": "1641024ee7475ce1636f6f7b6c9a6707f6a957ae194babe873816484c52eff69",
+      "runtime": "litert",
+      "tile": 64,
+      "target": null
+    },
+    {
+      "name": "realesr-general-x4v3-snpe.dlc",
+      "bytes": 1290724,
+      "sha256": "a90d47e94f3f8213ec9981a1e89c33ee127136134700aa445aa3b09316588e3d",
+      "runtime": "snpe",
+      "tile": 64,
+      "target": null
+    },
+    {
+      "name": "realesr-general-x4v3-rk3566_rk3568.rknn",
+      "bytes": 2736246,
+      "sha256": "443fd1db5ea6426cb678dde06b081a2c67097942c5d3b06bc89fa6370761dd2f",
+      "runtime": "rknn",
+      "tile": 64,
+      "target": "rk3566_rk3568"
+    },
+    {
+      "name": "realesr-general-x4v3-rk3562.rknn",
+      "bytes": 2779638,
+      "sha256": "b2cf63d3c328761bb04a6017d675112bb08b97278d56efc0d208572bfc1e5476",
+      "runtime": "rknn",
+      "tile": 64,
+      "target": "rk3562"
+    },
+    {
+      "name": "realesr-general-x4v3-rk3576.rknn",
+      "bytes": 3334134,
+      "sha256": "26e074a5820b4beb90f86a1da0a5bf6bec484504fe6c3a61c2a4aea0ef204595",
+      "runtime": "rknn",
+      "tile": 64,
+      "target": "rk3576"
+    },
+    {
+      "name": "realesr-general-x4v3-rk3588.rknn",
+      "bytes": 3802742,
+      "sha256": "751210ea7ee9305ae86a9f7db417c3ee6a59447e55cecabce7a83281d2809410",
+      "runtime": "rknn",
+      "tile": 64,
+      "target": "rk3588"
+    },
+    {
+      "name": "realesr-general-x4v3-t96.tflite",
+      "bytes": 4807016,
+      "sha256": "7c821878247e11263a45d40aa1879f04c9d932d8706ad0ccb2f939ec2ec4334e",
+      "runtime": "litert",
+      "tile": 96,
+      "target": null
+    },
+    {
+      "name": "realesr-general-x4v3-t96-snpe.dlc",
+      "bytes": 1290732,
+      "sha256": "6d9166cc32d3bc201eac8cb2fff36fb4d278c9122426cef9c9f195b8226252d1",
+      "runtime": "snpe",
+      "tile": 96,
+      "target": null
+    },
+    {
+      "name": "realesr-general-x4v3-t96-rk3566_rk3568.rknn",
+      "bytes": 2836982,
+      "sha256": "a0b9cc6e69807b30d8341e895be2aa7a626b41ddc862b9a2d107dc760facfc80",
+      "runtime": "rknn",
+      "tile": 96,
+      "target": "rk3566_rk3568"
+    },
+    {
+      "name": "realesr-general-x4v3-t96-rk3562.rknn",
+      "bytes": 2869430,
+      "sha256": "2a4bee1ba8691f208a81f507914e1eef84ae52a4d80cda0b6e90832ffb3ae4e6",
+      "runtime": "rknn",
+      "tile": 96,
+      "target": "rk3562"
+    },
+    {
+      "name": "realesr-general-x4v3-t96-rk3576.rknn",
+      "bytes": 3653046,
+      "sha256": "ceb634f44ca1e0beda8188f05150bf07781152f22d1d4b925124c714db9c68fa",
+      "runtime": "rknn",
+      "tile": 96,
+      "target": "rk3576"
+    },
+    {
+      "name": "realesr-general-x4v3-t96-rk3588.rknn",
+      "bytes": 4476982,
+      "sha256": "9ab77e27b1c5e3159e405054d0fa3c04511bc5eda462097d9c4a2383a4c42eb7",
+      "runtime": "rknn",
+      "tile": 96,
+      "target": "rk3588"
+    },
+    {
+      "name": "realesr-general-x4v3-t128.tflite",
+      "bytes": 4807016,
+      "sha256": "6a03c4f89e9ceaab47841d29655123b2f88b3d5c9d34f05d682c8a2909b9c235",
+      "runtime": "litert",
+      "tile": 128,
+      "target": null
+    },
+    {
+      "name": "realesr-general-x4v3-t128-snpe.dlc",
+      "bytes": 1290732,
+      "sha256": "aac6dd673110feab9a9737fefee81d47154b24935cd818ed5caf75859370acb2",
+      "runtime": "snpe",
+      "tile": 128,
+      "target": null
+    },
+    {
+      "name": "realesr-general-x4v3-t128-rk3566_rk3568.rknn",
+      "bytes": 2938806,
+      "sha256": "5cab23e9e6edca874453f970525639ba3785f39adf0869724e3431d1c2705a16",
+      "runtime": "rknn",
+      "tile": 128,
+      "target": "rk3566_rk3568"
+    },
+    {
+      "name": "realesr-general-x4v3-t128-rk3562.rknn",
+      "bytes": 3021046,
+      "sha256": "2d618486a8989ba57a441ced473ac7e84986030ea8b0d6ff49380171e41a1e14",
+      "runtime": "rknn",
+      "tile": 128,
+      "target": "rk3562"
+    },
+    {
+      "name": "realesr-general-x4v3-t128-rk3576.rknn",
+      "bytes": 4010422,
+      "sha256": "eaa493933b566e9a6ea0fab8726cf2c2a6b47624d2d474deebb5090d7c01c3bb",
+      "runtime": "rknn",
+      "tile": 128,
+      "target": "rk3576"
+    },
+    {
+      "name": "realesr-general-x4v3-t128-rk3588.rknn",
+      "bytes": 5493366,
+      "sha256": "857edaa3534c8714f22d7eb6967b934c553f0a7efd304dddfaca37ba01c3bce6",
+      "runtime": "rknn",
+      "tile": 128,
+      "target": "rk3588"
+    }
+  ]
+}
