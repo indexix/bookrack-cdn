@@ -1,7 +1,7 @@
 # BookRack model distribution
 
 Versioned model files for [BookRack](https://github.com/indexix/bookrack).
-The app downloads only the Real-ESRGAN variants needed for the selected execution path.
+The app downloads only the upscaling or TTS variants selected by the user.
 Native execution libraries are distributed with the app, not this repository.
 
 ## Real-ESRGAN general-x4v3 v1
@@ -23,3 +23,19 @@ execution; publishing a variant does not certify every device with that chipset.
 Models are release assets, not Git source blobs. Do not replace files under an existing version:
 publish a new version and update its manifest. The app pins the expected version and digests.
 No credentials are required to download these public assets.
+
+## Supertonic 3 TTS v1
+
+[Download voice models](https://github.com/indexix/bookrack-cdn/releases/tag/supertonic3-v1).
+Choose one bundle: INT8 (126 MB download) or FP32 (372 MB download).
+Both include four ONNX graphs, ten voice styles, the character index, configuration, and original license/provenance.
+Models and voice data are not packaged in the BookRack application. The native ONNX Runtime library ships in the application.
+
+- [Pinned manifest](models/supertonic3/v1/tts-model-catalog.json) contains archive and individual-file SHA-256 checksums.
+- [Model license: OpenRAIL-M](models/supertonic3/v1/Supertonic-model-OpenRAIL-M.txt). Its use-based restrictions apply to both bundles and downstream redistribution.
+- FP32: `supertone-oss-archive/supertonic-3` revision `aafc6e32416a594460b32413efc49d7fe4ce6d46` on Hugging Face.
+- INT8: `csukuangfj2/sherpa-onnx-supertonic-3-tts-int8-2026-05-11` revision `cca5a0e6c96e1d2c720986bf7e75fcc81dee3ae4` on Hugging Face.
+- The INT8 bundle retains the FP32 duration predictor and text encoder; only vector estimator/vocoder differ. No retraining or weight changes were made by BookRack.
+- Shared voice and text resources come from the pinned official FP32 repository.
+
+BookRack performs local CPU inference. These downloads do not certify GPU/NPU compatibility or performance on a particular e-reader.
