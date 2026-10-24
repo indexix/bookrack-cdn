@@ -1,0 +1,3 @@
+LlmMetadataProto.pbtext is from Google LiteRT-LM v0.18.1, models/qwen3_5, under Apache-2.0.
+https://github.com/google-ai-edge/LiteRT-LM/tree/v0.18.1/models/qwen3_5
+The exporter uses Google LiteRT Torch commit c677a8069d63fc86a6d14e11168dfc387fd9357c under Apache-2.0.

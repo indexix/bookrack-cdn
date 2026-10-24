@@ -1,0 +1,79 @@
+name: Export and calibrate Index-Translate-2B for LiteRT NPU
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    env:
+      OMP_NUM_THREADS: '4'
+      TOKENIZERS_PARALLELISM: 'false'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      HF_HOME: ${{ github.workspace }}/work/hf-cache
+      MODEL_TOOLS: models/index-translate-2b/v1/build
+      RELEASE_TAG: index-translate-2b-npu-v1
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Prepare isolated conversion runner
+        run: |
+          # These are unused preinstalled tools on this disposable GitHub runner.
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet
+          sudo fallocate -l 12G /mnt/index-swap
+          sudo chmod 600 /mnt/index-swap
+          sudo mkswap /mnt/index-swap
+          sudo swapon /mnt/index-swap
+          sudo apt-get update -qq
+          sudo apt-get install -y libgomp1 libgl1 libglib2.0-0 libstdc++6 libc++1 libc++abi1
+          python -m pip install --no-cache-dir --no-deps --extra-index-url https://download.pytorch.org/whl/cpu -r "$MODEL_TOOLS/litert-requirements-lock.txt"
+          mkdir -p work/logs
+          python -m pip freeze > work/logs/build-index2-litert-environment.txt
+          curl --fail --location --retry 3 https://github.com/google-ai-edge/litert-torch/archive/c677a8069d63fc86a6d14e11168dfc387fd9357c.tar.gz -o work/litert-source.tgz
+          tar -xzf work/litert-source.tgz -C work
+          echo "PYTHONPATH=$PWD/work/litert-torch-c677a8069d63fc86a6d14e11168dfc387fd9357c" >> "$GITHUB_ENV"
+      - name: Prepare original text weights
+        run: |
+          python "$MODEL_TOOLS/prepare_index_checkpoint.py" work/checkpoint --text-output work/text-hf
+          rm -rf work/checkpoint work/hf-cache
+      - name: Export, calibrate and quantize
+        run: |
+          set -o pipefail
+          for stage in export calibrate quantize; do
+            python -u "$MODEL_TOOLS/export_index_litert.py" "$stage" "$PWD/work/text-hf" "$PWD/work/litert-output" --metadata "$MODEL_TOOLS/litert-metadata.pbtext" 2>&1 | tee "work/logs/build-index2-litert-$stage.txt"
+          done
+      - name: Stage intermediate data for separate SoC compilation
+        run: |
+          mkdir work/assets
+          python - <<'PY'
+          import hashlib,json,pathlib
+          source=pathlib.Path('work/litert-output/quantized.litertlm')
+          assert source.stat().st_size > 1_000_000
+          parts=[]
+          with source.open('rb') as f:
+            i=0
+            while data:=f.read(1_000_000_000):
+              name=f'build-index2-litert-quantized.part{i:02d}'
+              pathlib.Path('work/assets',name).write_bytes(data)
+              parts.append({'name':name,'size':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+              i+=1
+          pathlib.Path('work/assets/build-index2-litert-parts.json').write_text(json.dumps(parts,indent=2)+'\n')
+          PY
+          cp work/logs/* work/assets/
+      - name: Upload intermediate data to existing draft only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          test "$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft)" = true
+          gh release upload "$RELEASE_TAG" work/assets/*
+      - name: Remove temporary swap
+        if: always()
+        run: |
+          sudo swapoff /mnt/index-swap || true
+          sudo rm -f /mnt/index-swap
