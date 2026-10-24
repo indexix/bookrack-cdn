@@ -26,6 +26,8 @@ def package(folder, output, metadata):
         metadata["files"][name] = {"sha256": sha, "size": p.stat().st_size}
     manifest_text = json.dumps(metadata, ensure_ascii=False, indent=2) + "\n"
     (folder / "manifest.json").write_text(manifest_text)
+    if output is None:
+        return metadata  # Automatic-download bundles need a manifest, not a duplicate ZIP.
     temporary = output.with_suffix(output.suffix + ".part")
     output.parent.mkdir(parents=True, exist_ok=True)
     try:

@@ -40,7 +40,20 @@ Models and voice data are not packaged in the BookRack application. The native O
 
 BookRack performs local CPU inference. These downloads do not certify GPU/NPU compatibility or performance on a particular e-reader.
 
-## Index-Translate-2B NPU conversion pipeline
+## Index-Translate-2B NPU v1 (OCR Transer, experimental)
+
+[Model downloads](https://github.com/indexix/bookrack-cdn/releases/tag/index-translate-2b-npu-v1),
+[pinned catalog](models/index-translate-2b/v1/vendor-model-catalog.json),
+[validation scope](models/index-translate-2b/v1/validation.json).
+
+- Qualcomm SNPE W8A16: about 3.93 GB, 512-token context. All seven partitions passed HTP v68/v69/v73/v75/v79/v81 offline compilation (42 checks). Quantized DLC generation matched a Japanese-to-Korean original-model sample twice on host CPU with state reset. Physical DSP/HTP execution is unverified.
+- Rockchip RKLLM W8A8: about 2.93 GB per target, 1024-token context, separate RK3588/RK3576/RK3562/RV1126B files. SDK conversion/calibration succeeded; device execution and output quality are unverified. The Android runtime requires 4 KB memory pages.
+- Index LiteRT-LM NPU is **not supplied**. The pinned export failed in the Qwen3.5 wrapper, and split-cache recurrent-state integration remains incomplete. No CPU/GPU export is presented as an NPU artifact.
+
+OCR Transer 0.9.0 selects/downloads the matching model, resumes interrupted transfers,
+verifies hashes, installs complete bundles atomically and checks actual runtime execution.
+These are storage sizes, not minimum RAM requirements. No device-family-wide performance
+or compatibility guarantee is implied. Model files contain data only.
 
 The manual `index-npu-rkllm` workflow converts only `IndexTeam/Index-Translate-2B`
 revision `9bc08445315723eb9b77d1b93505915eb03c3f01` using RKLLM Toolkit 1.3.1.

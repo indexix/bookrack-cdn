@@ -13,6 +13,9 @@ p.add_argument("--soc", default="SM8750")
 p.add_argument("--context", type=int, default=512)
 p.add_argument("--metadata", required=True)
 a = p.parse_args()
+pin = json.loads((pathlib.Path(a.checkpoint) / "source-pin.json").read_text())
+assert pin["source"] == "IndexTeam/Index-Translate-2B"
+assert pin["revision"] == "9bc08445315723eb9b77d1b93505915eb03c3f01"
 from litert_torch.generative.export_hf.experimental.npu_export.config_manager import (
     NpuPipelineConfig,
 )

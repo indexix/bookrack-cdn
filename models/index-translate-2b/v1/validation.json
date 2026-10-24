@@ -1,0 +1,52 @@
+{
+  "source": "IndexTeam/Index-Translate-2B",
+  "revision": "9bc08445315723eb9b77d1b93505915eb03c3f01",
+  "model": "index2",
+  "appVersion": "0.9.0",
+  "unitTests": {
+    "tests": 33,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": "passed",
+  "apkCatalogBundles": 5,
+  "vendorRuntimeFilesVerified": 44,
+  "onDeviceVerified": false,
+  "snpe": {
+    "conversionVerified": true,
+    "reference": "Same Android decoder code on Linux host CPU, not physical NPU",
+    "hostTranslation": "오늘은 날씨가 좋네요.",
+    "matchesFloatReference": true,
+    "resetRepeatMatched": true,
+    "offlineHtpGraphChecks": 42,
+    "htpArchitectures": [
+      "v68",
+      "v69",
+      "v73",
+      "v75",
+      "v79",
+      "v81"
+    ],
+    "legacySingleDlcRegression": "passed (two repeat generations from existing 0.8.0 fixture, no new Qwen conversion)"
+  },
+  "rkllm": {
+    "conversionVerified": true,
+    "targets": [
+      "rk3588",
+      "rk3576",
+      "rk3562",
+      "rv1126b"
+    ],
+    "referenceVerified": false,
+    "workflow": "https://github.com/indexix/bookrack-cdn/actions/runs/40117056676"
+  },
+  "litert": {
+    "provided": false,
+    "conversionVerified": false,
+    "failure": "Qwen3_5StaticModelHFWrapper has no attribute model",
+    "additionalFinding": "Pinned split-cache implementation has no linear_attention recurrent-state mapping/flattening. Additional integration and validation are required.",
+    "workflow": "https://github.com/indexix/bookrack-cdn/actions/runs/40118171468"
+  },
+  "apkSha256": "aee02b3524f8ed3a600314c32634a5fbeadca0bac885e4cc66d246706f862659"
+}
