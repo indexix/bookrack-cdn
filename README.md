@@ -39,3 +39,16 @@ Models and voice data are not packaged in the BookRack application. The native O
 - Shared voice and text resources come from the pinned official FP32 repository.
 
 BookRack performs local CPU inference. These downloads do not certify GPU/NPU compatibility or performance on a particular e-reader.
+
+## Index-Translate-2B NPU conversion pipeline
+
+The manual `index-npu-rkllm` workflow converts only `IndexTeam/Index-Translate-2B`
+revision `9bc08445315723eb9b77d1b93505915eb03c3f01` using RKLLM Toolkit 1.3.1.
+RK3588, RK3576, RK3562 and RV1126B have independent conversions and checksums.
+The workflow uploads candidates to an existing **draft** release; it does not
+publish a release or claim on-device validation. Conversion metadata distinguishes
+SDK conversion from runtime execution, which requires the target hardware.
+
+Model weights are Apache 2.0; see [the model license](models/index-translate-2b/v1/LICENSE.txt).
+Runtime libraries are not included in model assets. Download catalogs pin every
+asset's exact length and SHA-256 digest, including files split into 1 GB pieces.

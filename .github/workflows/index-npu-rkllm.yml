@@ -1,0 +1,81 @@
+name: Convert Index-Translate-2B for Rockchip NPU
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Target chip (all runs isolated SDK conversions)
+        type: choice
+        options: [all, rk3588, rk3576, rk3562, rv1126b]
+        default: all
+permissions:
+  contents: read
+jobs:
+  targets:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.targets.outputs.matrix }}
+    steps:
+      - id: targets
+        env:
+          TARGET: ${{ inputs.target }}
+        run: |
+          if [ "$TARGET" = all ]; then
+            echo 'matrix=["rk3588","rk3576","rk3562","rv1126b"]' >> "$GITHUB_OUTPUT"
+          else
+            printf 'matrix=["%s"]\n' "$TARGET" >> "$GITHUB_OUTPUT"
+          fi
+  convert:
+    needs: targets
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        target: ${{ fromJSON(needs.targets.outputs.matrix) }}
+    env:
+      OMP_NUM_THREADS: '4'
+      TOKENIZERS_PARALLELISM: 'false'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      HF_HOME: ${{ github.workspace }}/work/hf-cache
+      BUILD_CUDA_EXT: '0'
+      MODEL_TOOLS: models/index-translate-2b/v1/build
+      RELEASE_TAG: index-translate-2b-npu-v1
+      TARGET: ${{ matrix.target }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned conversion environment
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libgomp1 libgl1 libglib2.0-0 libstdc++6
+          python -m pip install --no-cache-dir torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+          curl --fail --location --retry 3 https://raw.githubusercontent.com/airockchip/rknn-llm/f7390530443bf84f0394255a449d7cbe81e69d1c/rkllm-toolkit/packages/rkllm_toolkit-1.3.1-cp312-cp312-linux_x86_64.whl -o /tmp/rkllm_toolkit-1.3.1-cp312-cp312-linux_x86_64.whl
+          echo 'ba4191cd50ec6a555367df3d6a88f5827e918210d2f209a84774301427fa0add  /tmp/rkllm_toolkit-1.3.1-cp312-cp312-linux_x86_64.whl' | sha256sum --check
+          python -m pip install --no-cache-dir --no-build-isolation /tmp/rkllm_toolkit-1.3.1-cp312-cp312-linux_x86_64.whl transformers==5.8.0 numpy==1.26.4 huggingface-hub==1.33.0 datasets==4.1.1 safetensors==0.5.3
+          mkdir -p work/logs
+          python -m pip freeze > "work/logs/index2-$TARGET-environment.txt"
+      - name: Download pinned original checkpoint
+        run: python "$MODEL_TOOLS/prepare_index_checkpoint.py" work/checkpoint
+      - name: Convert and calibrate using the target's SDK backend
+        run: |
+          set -o pipefail
+          python "$MODEL_TOOLS/export_vendor_rkllm.py" "$PWD/work/checkpoint" "$PWD/work/bundle" --model index2 --target "$TARGET" --context 1024 --calibration "$MODEL_TOOLS/calibration/index-translation.json" --license-file models/index-translate-2b/v1/LICENSE.txt 2>&1 | tee "work/logs/index2-$TARGET-conversion.txt"
+      - name: Prepare checksummed release candidates
+        run: |
+          rm -rf work/checkpoint work/hf-cache work/bundle.zip
+          python "$MODEL_TOOLS/build_index_download_catalog.py" work/bundle --assets work/assets --catalog "work/index2-rkllm-$TARGET-catalog.json" --tag "$RELEASE_TAG"
+          mv work/assets/vendor-model-catalog.json "work/assets/index2-rkllm-$TARGET-catalog.json"
+          mv work/assets/SHA256SUMS.txt "work/assets/index2-rkllm-$TARGET-SHA256SUMS.txt"
+          sed -i "s/  vendor-model-catalog.json/  index2-rkllm-$TARGET-catalog.json/" "work/assets/index2-rkllm-$TARGET-SHA256SUMS.txt"
+          cp work/logs/* work/assets/
+      - name: Upload to existing draft only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          test "$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft)" = true
+          gh release upload "$RELEASE_TAG" work/assets/*

@@ -1,0 +1,34 @@
+[
+  {
+    "input": "<|im_start|>user\n请将以下日语文本翻译为韩语，直接输出翻译结果，不要进行任何解释。\n\n今日は良い天気です。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "target": "오늘은 날씨가 좋습니다."
+  },
+  {
+    "input": "<|im_start|>user\n请将以下英语文本翻译为韩语，直接输出翻译结果，不要进行任何解释。\n\nPlease close the door and wait here.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "target": "문을 닫고 여기서 기다려 주세요."
+  },
+  {
+    "input": "<|im_start|>user\n请将以下韩语文本翻译为日语，直接输出翻译结果，不要进行任何解释。\n\n어디로 가고 있나요?<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "target": "どこへ行っていますか？"
+  },
+  {
+    "input": "<|im_start|>user\n请将以下日语文本翻译为韩语，直接输出翻译结果，不要进行任何解释。\n\nそんなこと、できるわけないだろ！<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "target": "그런 걸 할 수 있을 리 없잖아!"
+  },
+  {
+    "input": "<|im_start|>user\n请将以下英语文本翻译为韩语，直接输出翻译结果，不要进行任何解释。\n\nThe library closes at six in the evening.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "target": "도서관은 저녁 여섯 시에 문을 닫습니다."
+  },
+  {
+    "input": "<|im_start|>user\n请将以下日语文本翻译为韩语，直接输出翻译结果，不要进行任何解释。\n\nここから駅までは歩いて十分です。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "target": "여기서 역까지는 걸어서 십 분입니다."
+  },
+  {
+    "input": "<|im_start|>user\n请将以下韩语文本翻译为英语，直接输出翻译结果，不要进行任何解释。\n\n이 책의 다음 장을 읽어 보세요.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "target": "Please read the next chapter of this book."
+  },
+  {
+    "input": "<|im_start|>user\n请将以下英语文本翻译为日语，直接输出翻译结果，不要进行任何解释。\n\nI will return tomorrow morning.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "target": "明日の朝に戻ります。"
+  }
+]
