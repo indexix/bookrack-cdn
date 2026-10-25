@@ -1,0 +1,416 @@
+{
+  "schema": 1,
+  "models": [
+    {
+      "manifest": "{\n  \"runtime\": \"rkllm\",\n  \"model\": \"index2\",\n  \"modelFile\": \"model.rkllm\",\n  \"target\": \"rk3562\",\n  \"quantization\": \"W8A8\",\n  \"contextTokens\": 1024,\n  \"maxOutputTokens\": 512,\n  \"schema\": 1,\n  \"files\": {\n    \"model.rkllm\": {\n      \"sha256\": \"a5de22e93fa459b9fe6a1a52ce0745270f8694f100fa96c0eaacbf0de68e09ec\",\n      \"size\": 2926545292\n    },\n    \"LICENSE.txt\": {\n      \"sha256\": \"c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c\",\n      \"size\": 11358\n    },\n    \"conversion.json\": {\n      \"sha256\": \"9519c6f08c236584f47576df9d2615f86b195b62a6ffc06c3b6d520c7e5820e6\",\n      \"size\": 564\n    }\n  }\n}\n",
+      "manifestSha256": "42465052e5938e12a3f953aeeaef074526d6a3cec82ba040b2b1bc8d0822b4af",
+      "downloads": {
+        "model.rkllm": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3562-model.rkllm.part00",
+            "size": 1000000000,
+            "sha256": "75d39940cb5a87e7dc9f2d34c55319643fceb9e30ada09b5ffeef04b7e51ee86"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3562-model.rkllm.part01",
+            "size": 1000000000,
+            "sha256": "dd1939250598609d8625d5e046f4a1abb20e4550f003fc2ba4eab27d87fa76a1"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3562-model.rkllm.part02",
+            "size": 926545292,
+            "sha256": "bf54cc0dcdc1271700b8d011f8ea5e813eceba0fb9ce9a1ba63844fe7725765e"
+          }
+        ],
+        "LICENSE.txt": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3562-LICENSE.txt.part00",
+            "size": 11358,
+            "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c"
+          }
+        ],
+        "conversion.json": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3562-conversion.json.part00",
+            "size": 564,
+            "sha256": "9519c6f08c236584f47576df9d2615f86b195b62a6ffc06c3b6d520c7e5820e6"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": "{\n  \"runtime\": \"rkllm\",\n  \"model\": \"index2\",\n  \"modelFile\": \"model.rkllm\",\n  \"target\": \"rk3576\",\n  \"quantization\": \"W8A8\",\n  \"contextTokens\": 1024,\n  \"maxOutputTokens\": 512,\n  \"schema\": 1,\n  \"files\": {\n    \"model.rkllm\": {\n      \"sha256\": \"4db809686b93d8858fb413520bdb5cc1b209fc55608b1c2fd9c7bd815691b7c2\",\n      \"size\": 2940347412\n    },\n    \"LICENSE.txt\": {\n      \"sha256\": \"c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c\",\n      \"size\": 11358\n    },\n    \"conversion.json\": {\n      \"sha256\": \"db2e5a7af6911395db6dfb540b40cc59ebb64dde57cafc8b2f7331197e2f273e\",\n      \"size\": 564\n    }\n  }\n}\n",
+      "manifestSha256": "aa3ea978d67c47cb11bdc467e21ac68de46ac8c5eae32d667dea5709aacab2bd",
+      "downloads": {
+        "model.rkllm": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3576-model.rkllm.part00",
+            "size": 1000000000,
+            "sha256": "16156c53fe545d039e1d34b5e88b5b16660e3e0398fa12d79db6534d21e16d77"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3576-model.rkllm.part01",
+            "size": 1000000000,
+            "sha256": "85b2a054922df2a85ada8ca3aab1dab4c6f9123597b6c59f59c3d6ec59e9513d"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3576-model.rkllm.part02",
+            "size": 940347412,
+            "sha256": "7ba1b1e013bc65a629b8af2293e836a4d68c375c6a959e9bb4a03053b272530f"
+          }
+        ],
+        "LICENSE.txt": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3576-LICENSE.txt.part00",
+            "size": 11358,
+            "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c"
+          }
+        ],
+        "conversion.json": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3576-conversion.json.part00",
+            "size": 564,
+            "sha256": "db2e5a7af6911395db6dfb540b40cc59ebb64dde57cafc8b2f7331197e2f273e"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": "{\n  \"runtime\": \"rkllm\",\n  \"model\": \"index2\",\n  \"modelFile\": \"model.rkllm\",\n  \"target\": \"rk3588\",\n  \"quantization\": \"W8A8\",\n  \"contextTokens\": 1024,\n  \"maxOutputTokens\": 512,\n  \"schema\": 1,\n  \"files\": {\n    \"model.rkllm\": {\n      \"sha256\": \"d98d8e34ab9b25e8d0898a35cc4b9efca4cc62939ddbd47ba2d4c3d95c2a9907\",\n      \"size\": 2934545060\n    },\n    \"LICENSE.txt\": {\n      \"sha256\": \"c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c\",\n      \"size\": 11358\n    },\n    \"conversion.json\": {\n      \"sha256\": \"2d3a0033ab049259587fd3f8874cb13c0c20309cee3b17281987c084400c865b\",\n      \"size\": 564\n    }\n  }\n}\n",
+      "manifestSha256": "ea54457fbdd0e1f206e825ebd6bd6aaeb55d5e4e422d205f1735636a48313482",
+      "downloads": {
+        "model.rkllm": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3588-model.rkllm.part00",
+            "size": 1000000000,
+            "sha256": "c0b64488361e5601cbb2a57c717fe9f3a4e1d91a191dc49231fc4d0e1295c34e"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3588-model.rkllm.part01",
+            "size": 1000000000,
+            "sha256": "2816f92982a5ca897995fb3e7442ee2f5ddd297f1bdcc090fa10f616845c2c88"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3588-model.rkllm.part02",
+            "size": 934545060,
+            "sha256": "4e5b4953134034693b61c0439b4533772b59a6732889b060b2c66bc1f9b14628"
+          }
+        ],
+        "LICENSE.txt": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3588-LICENSE.txt.part00",
+            "size": 11358,
+            "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c"
+          }
+        ],
+        "conversion.json": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rk3588-conversion.json.part00",
+            "size": 564,
+            "sha256": "2d3a0033ab049259587fd3f8874cb13c0c20309cee3b17281987c084400c865b"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": "{\n  \"runtime\": \"rkllm\",\n  \"model\": \"index2\",\n  \"modelFile\": \"model.rkllm\",\n  \"target\": \"rv1126b\",\n  \"quantization\": \"W8A8\",\n  \"contextTokens\": 1024,\n  \"maxOutputTokens\": 512,\n  \"schema\": 1,\n  \"files\": {\n    \"model.rkllm\": {\n      \"sha256\": \"0ed357a6af489349f892648fd33470edfed868210304ef5c664c39804932f012\",\n      \"size\": 2926566972\n    },\n    \"LICENSE.txt\": {\n      \"sha256\": \"c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c\",\n      \"size\": 11358\n    },\n    \"conversion.json\": {\n      \"sha256\": \"7b33244de7d647d8480d45d1ef900880d87ffa396d67c85f4bd5dbd1a9ba8f5f\",\n      \"size\": 565\n    }\n  }\n}\n",
+      "manifestSha256": "c8df8d3c9d0ceb568fb258418fe1966c53c1c7745a229eec206135974f7d3338",
+      "downloads": {
+        "model.rkllm": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rv1126b-model.rkllm.part00",
+            "size": 1000000000,
+            "sha256": "3f973b0c917c22b9d903aa53612b9cd709b9c29924eeaadea23adc4eb9e934c6"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rv1126b-model.rkllm.part01",
+            "size": 1000000000,
+            "sha256": "e47fe7bd3e98abad37edb4c691880363899fb92445a93a272e88708d6de4fbe5"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rv1126b-model.rkllm.part02",
+            "size": 926566972,
+            "sha256": "fb73f6692da1f0b992c207affee795f22f077050eef30968bde717b543559789"
+          }
+        ],
+        "LICENSE.txt": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rv1126b-LICENSE.txt.part00",
+            "size": 11358,
+            "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c"
+          }
+        ],
+        "conversion.json": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-rkllm-rv1126b-conversion.json.part00",
+            "size": 565,
+            "sha256": "7b33244de7d647d8480d45d1ef900880d87ffa396d67c85f4bd5dbd1a9ba8f5f"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": "{\n  \"runtime\": \"snpe\",\n  \"model\": \"index2\",\n  \"modelFile\": \"part-00.dlc\",\n  \"target\": \"qualcomm\",\n  \"quantization\": \"W8A16\",\n  \"contextTokens\": 512,\n  \"maxOutputTokens\": 256,\n  \"decoder\": {\n    \"hiddenSize\": 2048,\n    \"headDim\": 64,\n    \"vocabSize\": 248320,\n    \"ropeTheta\": 10000000,\n    \"states\": [\n      {\n        \"input\": \"conv_0\",\n        \"output\": \"conv_0_out\"\n      },\n      {\n        \"input\": \"recurrent_0\",\n        \"output\": \"recurrent_0_out\"\n      },\n      {\n        \"input\": \"conv_1\",\n        \"output\": \"conv_1_out\"\n      },\n      {\n        \"input\": \"recurrent_1\",\n        \"output\": \"recurrent_1_out\"\n      },\n      {\n        \"input\": \"conv_2\",\n        \"output\": \"conv_2_out\"\n      },\n      {\n        \"input\": \"recurrent_2\",\n        \"output\": \"recurrent_2_out\"\n      },\n      {\n        \"input\": \"key_3\",\n        \"output\": \"key_3_out\"\n      },\n      {\n        \"input\": \"value_3\",\n        \"output\": \"value_3_out\"\n      },\n      {\n        \"input\": \"conv_4\",\n        \"output\": \"conv_4_out\"\n      },\n      {\n        \"input\": \"recurrent_4\",\n        \"output\": \"recurrent_4_out\"\n      },\n      {\n        \"input\": \"conv_5\",\n        \"output\": \"conv_5_out\"\n      },\n      {\n        \"input\": \"recurrent_5\",\n        \"output\": \"recurrent_5_out\"\n      },\n      {\n        \"input\": \"conv_6\",\n        \"output\": \"conv_6_out\"\n      },\n      {\n        \"input\": \"recurrent_6\",\n        \"output\": \"recurrent_6_out\"\n      },\n      {\n        \"input\": \"key_7\",\n        \"output\": \"key_7_out\"\n      },\n      {\n        \"input\": \"value_7\",\n        \"output\": \"value_7_out\"\n      },\n      {\n        \"input\": \"conv_8\",\n        \"output\": \"conv_8_out\"\n      },\n      {\n        \"input\": \"recurrent_8\",\n        \"output\": \"recurrent_8_out\"\n      },\n      {\n        \"input\": \"conv_9\",\n        \"output\": \"conv_9_out\"\n      },\n      {\n        \"input\": \"recurrent_9\",\n        \"output\": \"recurrent_9_out\"\n      },\n      {\n        \"input\": \"conv_10\",\n        \"output\": \"conv_10_out\"\n      },\n      {\n        \"input\": \"recurrent_10\",\n        \"output\": \"recurrent_10_out\"\n      },\n      {\n        \"input\": \"key_11\",\n        \"output\": \"key_11_out\"\n      },\n      {\n        \"input\": \"value_11\",\n        \"output\": \"value_11_out\"\n      },\n      {\n        \"input\": \"conv_12\",\n        \"output\": \"conv_12_out\"\n      },\n      {\n        \"input\": \"recurrent_12\",\n        \"output\": \"recurrent_12_out\"\n      },\n      {\n        \"input\": \"conv_13\",\n        \"output\": \"conv_13_out\"\n      },\n      {\n        \"input\": \"recurrent_13\",\n        \"output\": \"recurrent_13_out\"\n      },\n      {\n        \"input\": \"conv_14\",\n        \"output\": \"conv_14_out\"\n      },\n      {\n        \"input\": \"recurrent_14\",\n        \"output\": \"recurrent_14_out\"\n      },\n      {\n        \"input\": \"key_15\",\n        \"output\": \"key_15_out\"\n      },\n      {\n        \"input\": \"value_15\",\n        \"output\": \"value_15_out\"\n      },\n      {\n        \"input\": \"conv_16\",\n        \"output\": \"conv_16_out\"\n      },\n      {\n        \"input\": \"recurrent_16\",\n        \"output\": \"recurrent_16_out\"\n      },\n      {\n        \"input\": \"conv_17\",\n        \"output\": \"conv_17_out\"\n      },\n      {\n        \"input\": \"recurrent_17\",\n        \"output\": \"recurrent_17_out\"\n      },\n      {\n        \"input\": \"conv_18\",\n        \"output\": \"conv_18_out\"\n      },\n      {\n        \"input\": \"recurrent_18\",\n        \"output\": \"recurrent_18_out\"\n      },\n      {\n        \"input\": \"key_19\",\n        \"output\": \"key_19_out\"\n      },\n      {\n        \"input\": \"value_19\",\n        \"output\": \"value_19_out\"\n      },\n      {\n        \"input\": \"conv_20\",\n        \"output\": \"conv_20_out\"\n      },\n      {\n        \"input\": \"recurrent_20\",\n        \"output\": \"recurrent_20_out\"\n      },\n      {\n        \"input\": \"conv_21\",\n        \"output\": \"conv_21_out\"\n      },\n      {\n        \"input\": \"recurrent_21\",\n        \"output\": \"recurrent_21_out\"\n      },\n      {\n        \"input\": \"conv_22\",\n        \"output\": \"conv_22_out\"\n      },\n      {\n        \"input\": \"recurrent_22\",\n        \"output\": \"recurrent_22_out\"\n      },\n      {\n        \"input\": \"key_23\",\n        \"output\": \"key_23_out\"\n      },\n      {\n        \"input\": \"value_23\",\n        \"output\": \"value_23_out\"\n      }\n    ],\n    \"partitions\": [\n      {\n        \"modelFile\": \"part-00.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_0\",\n            \"output\": \"conv_0_out\"\n          },\n          {\n            \"input\": \"recurrent_0\",\n            \"output\": \"recurrent_0_out\"\n          },\n          {\n            \"input\": \"conv_1\",\n            \"output\": \"conv_1_out\"\n          },\n          {\n            \"input\": \"recurrent_1\",\n            \"output\": \"recurrent_1_out\"\n          },\n          {\n            \"input\": \"conv_2\",\n            \"output\": \"conv_2_out\"\n          },\n          {\n            \"input\": \"recurrent_2\",\n            \"output\": \"recurrent_2_out\"\n          },\n          {\n            \"input\": \"key_3\",\n            \"output\": \"key_3_out\"\n          },\n          {\n            \"input\": \"value_3\",\n            \"output\": \"value_3_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-01.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_4\",\n            \"output\": \"conv_4_out\"\n          },\n          {\n            \"input\": \"recurrent_4\",\n            \"output\": \"recurrent_4_out\"\n          },\n          {\n            \"input\": \"conv_5\",\n            \"output\": \"conv_5_out\"\n          },\n          {\n            \"input\": \"recurrent_5\",\n            \"output\": \"recurrent_5_out\"\n          },\n          {\n            \"input\": \"conv_6\",\n            \"output\": \"conv_6_out\"\n          },\n          {\n            \"input\": \"recurrent_6\",\n            \"output\": \"recurrent_6_out\"\n          },\n          {\n            \"input\": \"key_7\",\n            \"output\": \"key_7_out\"\n          },\n          {\n            \"input\": \"value_7\",\n            \"output\": \"value_7_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-02.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_8\",\n            \"output\": \"conv_8_out\"\n          },\n          {\n            \"input\": \"recurrent_8\",\n            \"output\": \"recurrent_8_out\"\n          },\n          {\n            \"input\": \"conv_9\",\n            \"output\": \"conv_9_out\"\n          },\n          {\n            \"input\": \"recurrent_9\",\n            \"output\": \"recurrent_9_out\"\n          },\n          {\n            \"input\": \"conv_10\",\n            \"output\": \"conv_10_out\"\n          },\n          {\n            \"input\": \"recurrent_10\",\n            \"output\": \"recurrent_10_out\"\n          },\n          {\n            \"input\": \"key_11\",\n            \"output\": \"key_11_out\"\n          },\n          {\n            \"input\": \"value_11\",\n            \"output\": \"value_11_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-03.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_12\",\n            \"output\": \"conv_12_out\"\n          },\n          {\n            \"input\": \"recurrent_12\",\n            \"output\": \"recurrent_12_out\"\n          },\n          {\n            \"input\": \"conv_13\",\n            \"output\": \"conv_13_out\"\n          },\n          {\n            \"input\": \"recurrent_13\",\n            \"output\": \"recurrent_13_out\"\n          },\n          {\n            \"input\": \"conv_14\",\n            \"output\": \"conv_14_out\"\n          },\n          {\n            \"input\": \"recurrent_14\",\n            \"output\": \"recurrent_14_out\"\n          },\n          {\n            \"input\": \"key_15\",\n            \"output\": \"key_15_out\"\n          },\n          {\n            \"input\": \"value_15\",\n            \"output\": \"value_15_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-04.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_16\",\n            \"output\": \"conv_16_out\"\n          },\n          {\n            \"input\": \"recurrent_16\",\n            \"output\": \"recurrent_16_out\"\n          },\n          {\n            \"input\": \"conv_17\",\n            \"output\": \"conv_17_out\"\n          },\n          {\n            \"input\": \"recurrent_17\",\n            \"output\": \"recurrent_17_out\"\n          },\n          {\n            \"input\": \"conv_18\",\n            \"output\": \"conv_18_out\"\n          },\n          {\n            \"input\": \"recurrent_18\",\n            \"output\": \"recurrent_18_out\"\n          },\n          {\n            \"input\": \"key_19\",\n            \"output\": \"key_19_out\"\n          },\n          {\n            \"input\": \"value_19\",\n            \"output\": \"value_19_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-05.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_20\",\n            \"output\": \"conv_20_out\"\n          },\n          {\n            \"input\": \"recurrent_20\",\n            \"output\": \"recurrent_20_out\"\n          },\n          {\n            \"input\": \"conv_21\",\n            \"output\": \"conv_21_out\"\n          },\n          {\n            \"input\": \"recurrent_21\",\n            \"output\": \"recurrent_21_out\"\n          },\n          {\n            \"input\": \"conv_22\",\n            \"output\": \"conv_22_out\"\n          },\n          {\n            \"input\": \"recurrent_22\",\n            \"output\": \"recurrent_22_out\"\n          },\n          {\n            \"input\": \"key_23\",\n            \"output\": \"key_23_out\"\n          },\n          {\n            \"input\": \"value_23\",\n            \"output\": \"value_23_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"head.dlc\",\n        \"output\": \"logits\",\n        \"states\": []\n      }\n    ]\n  },\n  \"schema\": 1,\n  \"files\": {\n    \"part-00.dlc\": {\n      \"sha256\": \"626bb881c1ca2c007d7a78b8d0090af4cb2abda8c58536b86975a33bbcce7df0\",\n      \"size\": 229189116\n    },\n    \"embedding.f32\": {\n      \"sha256\": \"6b189ebee78915d0a7379964a7b19c971857d3e6953a2da1e6cc483640a23c45\",\n      \"size\": 2034237440\n    },\n    \"tokenizer.gguf\": {\n      \"sha256\": \"42c802884055f2fdd55b677c5414480a8666d1da335354ac527987f49aeac94a\",\n      \"size\": 10942400\n    },\n    \"part-01.dlc\": {\n      \"sha256\": \"b5dabfb21483264fea7aeb61422737844743c50bc417aa04cacfcdfd75ed7575\",\n      \"size\": 229189140\n    },\n    \"part-02.dlc\": {\n      \"sha256\": \"77ed97ab793ad8313ee5ce280e3e6057482ae31b538344a16f965b99840e24f6\",\n      \"size\": 229189212\n    },\n    \"part-03.dlc\": {\n      \"sha256\": \"40b44299eb65962314a75059d9dab7ea48113af7e60da2c8fd6ba770a18cd7a0\",\n      \"size\": 229189268\n    },\n    \"part-04.dlc\": {\n      \"sha256\": \"4ba4c149d77065a0bae9bfb8455e8dbb4cbf1f863056fc2d25f86549d26133a3\",\n      \"size\": 229189276\n    },\n    \"part-05.dlc\": {\n      \"sha256\": \"71dd27d08a375bfa29bcf517ebd772949a85ea3b524f6d1fdb2c838088194a91\",\n      \"size\": 229189276\n    },\n    \"head.dlc\": {\n      \"sha256\": \"b03033306ad78c7bd0370974717c6ae8dd86dda042b80f6f28ed261882d41415\",\n      \"size\": 508577204\n    },\n    \"LICENSE.txt\": {\n      \"sha256\": \"c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c\",\n      \"size\": 11358\n    },\n    \"NOTICE.txt\": {\n      \"sha256\": \"b9eb1e46625628839f20df4890a6e6cdfcd1db9e7879fc6a0e93afce8216060a\",\n      \"size\": 417\n    },\n    \"conversion.json\": {\n      \"sha256\": \"8469f8c58b97b0c7c9b4c3e4ee663017be3d80732e653b2c3c6d5d9398858eba\",\n      \"size\": 3588\n    }\n  }\n}\n",
+      "manifestSha256": "1242ec1fcc17aec9a7ed6a82ab2a7b73dada6152290aec6becc78a510b986e33",
+      "downloads": {
+        "part-00.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-part-00.dlc.part00",
+            "size": 229189116,
+            "sha256": "626bb881c1ca2c007d7a78b8d0090af4cb2abda8c58536b86975a33bbcce7df0"
+          }
+        ],
+        "embedding.f32": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-embedding.f32.part00",
+            "size": 1000000000,
+            "sha256": "c7bcd3c549feea49ee78bf617eee2dba3c5770f91e950e486c2d2e28b5af5b5a"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-embedding.f32.part01",
+            "size": 1000000000,
+            "sha256": "bc3b3b18db4d7d61dad6c8734b690a1c846080c539c5071b39a7ec78d4bc8717"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-embedding.f32.part02",
+            "size": 34237440,
+            "sha256": "ee681e89414b052a57bf8a5437d92137ceb60413e17f4823affce8da98145217"
+          }
+        ],
+        "tokenizer.gguf": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-tokenizer.gguf.part00",
+            "size": 10942400,
+            "sha256": "42c802884055f2fdd55b677c5414480a8666d1da335354ac527987f49aeac94a"
+          }
+        ],
+        "part-01.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-part-01.dlc.part00",
+            "size": 229189140,
+            "sha256": "b5dabfb21483264fea7aeb61422737844743c50bc417aa04cacfcdfd75ed7575"
+          }
+        ],
+        "part-02.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-part-02.dlc.part00",
+            "size": 229189212,
+            "sha256": "77ed97ab793ad8313ee5ce280e3e6057482ae31b538344a16f965b99840e24f6"
+          }
+        ],
+        "part-03.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-part-03.dlc.part00",
+            "size": 229189268,
+            "sha256": "40b44299eb65962314a75059d9dab7ea48113af7e60da2c8fd6ba770a18cd7a0"
+          }
+        ],
+        "part-04.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-part-04.dlc.part00",
+            "size": 229189276,
+            "sha256": "4ba4c149d77065a0bae9bfb8455e8dbb4cbf1f863056fc2d25f86549d26133a3"
+          }
+        ],
+        "part-05.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-part-05.dlc.part00",
+            "size": 229189276,
+            "sha256": "71dd27d08a375bfa29bcf517ebd772949a85ea3b524f6d1fdb2c838088194a91"
+          }
+        ],
+        "head.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-head.dlc.part00",
+            "size": 508577204,
+            "sha256": "b03033306ad78c7bd0370974717c6ae8dd86dda042b80f6f28ed261882d41415"
+          }
+        ],
+        "LICENSE.txt": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-LICENSE.txt.part00",
+            "size": 11358,
+            "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c"
+          }
+        ],
+        "NOTICE.txt": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-NOTICE.txt.part00",
+            "size": 417,
+            "sha256": "b9eb1e46625628839f20df4890a6e6cdfcd1db9e7879fc6a0e93afce8216060a"
+          }
+        ],
+        "conversion.json": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-conversion.json.part00",
+            "size": 3588,
+            "sha256": "8469f8c58b97b0c7c9b4c3e4ee663017be3d80732e653b2c3c6d5d9398858eba"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": "{\n  \"runtime\": \"snpe\",\n  \"model\": \"index2\",\n  \"modelFile\": \"part-00.dlc\",\n  \"target\": \"qualcomm\",\n  \"quantization\": \"CPU W8/FP32 + DSP W8A8\",\n  \"executionMode\": \"cpu_body_dsp_head\",\n  \"activationBits\": 8,\n  \"contextTokens\": 512,\n  \"maxOutputTokens\": 256,\n  \"decoder\": {\n    \"hiddenSize\": 2048,\n    \"headDim\": 64,\n    \"vocabSize\": 248320,\n    \"ropeTheta\": 10000000,\n    \"states\": [\n      {\n        \"input\": \"conv_0\",\n        \"output\": \"conv_0_out\"\n      },\n      {\n        \"input\": \"recurrent_0\",\n        \"output\": \"recurrent_0_out\"\n      },\n      {\n        \"input\": \"conv_1\",\n        \"output\": \"conv_1_out\"\n      },\n      {\n        \"input\": \"recurrent_1\",\n        \"output\": \"recurrent_1_out\"\n      },\n      {\n        \"input\": \"conv_2\",\n        \"output\": \"conv_2_out\"\n      },\n      {\n        \"input\": \"recurrent_2\",\n        \"output\": \"recurrent_2_out\"\n      },\n      {\n        \"input\": \"key_3\",\n        \"output\": \"key_3_out\"\n      },\n      {\n        \"input\": \"value_3\",\n        \"output\": \"value_3_out\"\n      },\n      {\n        \"input\": \"conv_4\",\n        \"output\": \"conv_4_out\"\n      },\n      {\n        \"input\": \"recurrent_4\",\n        \"output\": \"recurrent_4_out\"\n      },\n      {\n        \"input\": \"conv_5\",\n        \"output\": \"conv_5_out\"\n      },\n      {\n        \"input\": \"recurrent_5\",\n        \"output\": \"recurrent_5_out\"\n      },\n      {\n        \"input\": \"conv_6\",\n        \"output\": \"conv_6_out\"\n      },\n      {\n        \"input\": \"recurrent_6\",\n        \"output\": \"recurrent_6_out\"\n      },\n      {\n        \"input\": \"key_7\",\n        \"output\": \"key_7_out\"\n      },\n      {\n        \"input\": \"value_7\",\n        \"output\": \"value_7_out\"\n      },\n      {\n        \"input\": \"conv_8\",\n        \"output\": \"conv_8_out\"\n      },\n      {\n        \"input\": \"recurrent_8\",\n        \"output\": \"recurrent_8_out\"\n      },\n      {\n        \"input\": \"conv_9\",\n        \"output\": \"conv_9_out\"\n      },\n      {\n        \"input\": \"recurrent_9\",\n        \"output\": \"recurrent_9_out\"\n      },\n      {\n        \"input\": \"conv_10\",\n        \"output\": \"conv_10_out\"\n      },\n      {\n        \"input\": \"recurrent_10\",\n        \"output\": \"recurrent_10_out\"\n      },\n      {\n        \"input\": \"key_11\",\n        \"output\": \"key_11_out\"\n      },\n      {\n        \"input\": \"value_11\",\n        \"output\": \"value_11_out\"\n      },\n      {\n        \"input\": \"conv_12\",\n        \"output\": \"conv_12_out\"\n      },\n      {\n        \"input\": \"recurrent_12\",\n        \"output\": \"recurrent_12_out\"\n      },\n      {\n        \"input\": \"conv_13\",\n        \"output\": \"conv_13_out\"\n      },\n      {\n        \"input\": \"recurrent_13\",\n        \"output\": \"recurrent_13_out\"\n      },\n      {\n        \"input\": \"conv_14\",\n        \"output\": \"conv_14_out\"\n      },\n      {\n        \"input\": \"recurrent_14\",\n        \"output\": \"recurrent_14_out\"\n      },\n      {\n        \"input\": \"key_15\",\n        \"output\": \"key_15_out\"\n      },\n      {\n        \"input\": \"value_15\",\n        \"output\": \"value_15_out\"\n      },\n      {\n        \"input\": \"conv_16\",\n        \"output\": \"conv_16_out\"\n      },\n      {\n        \"input\": \"recurrent_16\",\n        \"output\": \"recurrent_16_out\"\n      },\n      {\n        \"input\": \"conv_17\",\n        \"output\": \"conv_17_out\"\n      },\n      {\n        \"input\": \"recurrent_17\",\n        \"output\": \"recurrent_17_out\"\n      },\n      {\n        \"input\": \"conv_18\",\n        \"output\": \"conv_18_out\"\n      },\n      {\n        \"input\": \"recurrent_18\",\n        \"output\": \"recurrent_18_out\"\n      },\n      {\n        \"input\": \"key_19\",\n        \"output\": \"key_19_out\"\n      },\n      {\n        \"input\": \"value_19\",\n        \"output\": \"value_19_out\"\n      },\n      {\n        \"input\": \"conv_20\",\n        \"output\": \"conv_20_out\"\n      },\n      {\n        \"input\": \"recurrent_20\",\n        \"output\": \"recurrent_20_out\"\n      },\n      {\n        \"input\": \"conv_21\",\n        \"output\": \"conv_21_out\"\n      },\n      {\n        \"input\": \"recurrent_21\",\n        \"output\": \"recurrent_21_out\"\n      },\n      {\n        \"input\": \"conv_22\",\n        \"output\": \"conv_22_out\"\n      },\n      {\n        \"input\": \"recurrent_22\",\n        \"output\": \"recurrent_22_out\"\n      },\n      {\n        \"input\": \"key_23\",\n        \"output\": \"key_23_out\"\n      },\n      {\n        \"input\": \"value_23\",\n        \"output\": \"value_23_out\"\n      }\n    ],\n    \"partitions\": [\n      {\n        \"modelFile\": \"part-00.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_0\",\n            \"output\": \"conv_0_out\"\n          },\n          {\n            \"input\": \"recurrent_0\",\n            \"output\": \"recurrent_0_out\"\n          },\n          {\n            \"input\": \"conv_1\",\n            \"output\": \"conv_1_out\"\n          },\n          {\n            \"input\": \"recurrent_1\",\n            \"output\": \"recurrent_1_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-01.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_2\",\n            \"output\": \"conv_2_out\"\n          },\n          {\n            \"input\": \"recurrent_2\",\n            \"output\": \"recurrent_2_out\"\n          },\n          {\n            \"input\": \"key_3\",\n            \"output\": \"key_3_out\"\n          },\n          {\n            \"input\": \"value_3\",\n            \"output\": \"value_3_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-02.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_4\",\n            \"output\": \"conv_4_out\"\n          },\n          {\n            \"input\": \"recurrent_4\",\n            \"output\": \"recurrent_4_out\"\n          },\n          {\n            \"input\": \"conv_5\",\n            \"output\": \"conv_5_out\"\n          },\n          {\n            \"input\": \"recurrent_5\",\n            \"output\": \"recurrent_5_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-03.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_6\",\n            \"output\": \"conv_6_out\"\n          },\n          {\n            \"input\": \"recurrent_6\",\n            \"output\": \"recurrent_6_out\"\n          },\n          {\n            \"input\": \"key_7\",\n            \"output\": \"key_7_out\"\n          },\n          {\n            \"input\": \"value_7\",\n            \"output\": \"value_7_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-04.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_8\",\n            \"output\": \"conv_8_out\"\n          },\n          {\n            \"input\": \"recurrent_8\",\n            \"output\": \"recurrent_8_out\"\n          },\n          {\n            \"input\": \"conv_9\",\n            \"output\": \"conv_9_out\"\n          },\n          {\n            \"input\": \"recurrent_9\",\n            \"output\": \"recurrent_9_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-05.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_10\",\n            \"output\": \"conv_10_out\"\n          },\n          {\n            \"input\": \"recurrent_10\",\n            \"output\": \"recurrent_10_out\"\n          },\n          {\n            \"input\": \"key_11\",\n            \"output\": \"key_11_out\"\n          },\n          {\n            \"input\": \"value_11\",\n            \"output\": \"value_11_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-06.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_12\",\n            \"output\": \"conv_12_out\"\n          },\n          {\n            \"input\": \"recurrent_12\",\n            \"output\": \"recurrent_12_out\"\n          },\n          {\n            \"input\": \"conv_13\",\n            \"output\": \"conv_13_out\"\n          },\n          {\n            \"input\": \"recurrent_13\",\n            \"output\": \"recurrent_13_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-07.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_14\",\n            \"output\": \"conv_14_out\"\n          },\n          {\n            \"input\": \"recurrent_14\",\n            \"output\": \"recurrent_14_out\"\n          },\n          {\n            \"input\": \"key_15\",\n            \"output\": \"key_15_out\"\n          },\n          {\n            \"input\": \"value_15\",\n            \"output\": \"value_15_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-08.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_16\",\n            \"output\": \"conv_16_out\"\n          },\n          {\n            \"input\": \"recurrent_16\",\n            \"output\": \"recurrent_16_out\"\n          },\n          {\n            \"input\": \"conv_17\",\n            \"output\": \"conv_17_out\"\n          },\n          {\n            \"input\": \"recurrent_17\",\n            \"output\": \"recurrent_17_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-09.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_18\",\n            \"output\": \"conv_18_out\"\n          },\n          {\n            \"input\": \"recurrent_18\",\n            \"output\": \"recurrent_18_out\"\n          },\n          {\n            \"input\": \"key_19\",\n            \"output\": \"key_19_out\"\n          },\n          {\n            \"input\": \"value_19\",\n            \"output\": \"value_19_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-10.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_20\",\n            \"output\": \"conv_20_out\"\n          },\n          {\n            \"input\": \"recurrent_20\",\n            \"output\": \"recurrent_20_out\"\n          },\n          {\n            \"input\": \"conv_21\",\n            \"output\": \"conv_21_out\"\n          },\n          {\n            \"input\": \"recurrent_21\",\n            \"output\": \"recurrent_21_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"part-11.dlc\",\n        \"output\": \"hidden\",\n        \"states\": [\n          {\n            \"input\": \"conv_22\",\n            \"output\": \"conv_22_out\"\n          },\n          {\n            \"input\": \"recurrent_22\",\n            \"output\": \"recurrent_22_out\"\n          },\n          {\n            \"input\": \"key_23\",\n            \"output\": \"key_23_out\"\n          },\n          {\n            \"input\": \"value_23\",\n            \"output\": \"value_23_out\"\n          }\n        ]\n      },\n      {\n        \"modelFile\": \"head-00.dlc\",\n        \"output\": \"logits\",\n        \"states\": [],\n        \"vocabOffset\": 0,\n        \"outputSize\": 62080\n      },\n      {\n        \"modelFile\": \"head-01.dlc\",\n        \"output\": \"logits\",\n        \"states\": [],\n        \"vocabOffset\": 62080,\n        \"outputSize\": 62080\n      },\n      {\n        \"modelFile\": \"head-02.dlc\",\n        \"output\": \"logits\",\n        \"states\": [],\n        \"vocabOffset\": 124160,\n        \"outputSize\": 62080\n      },\n      {\n        \"modelFile\": \"head-03.dlc\",\n        \"output\": \"logits\",\n        \"states\": [],\n        \"vocabOffset\": 186240,\n        \"outputSize\": 62080\n      }\n    ],\n    \"attentionMaskValue\": -10000\n  },\n  \"schema\": 1,\n  \"files\": {\n    \"part-00.dlc\": {\n      \"sha256\": \"6bbca4325d1a4eeab11c621c01e9ab6412e672d6807b14b68ebf75b3aa141d02\",\n      \"size\": 117796172\n    },\n    \"embedding.f32\": {\n      \"sha256\": \"6b189ebee78915d0a7379964a7b19c971857d3e6953a2da1e6cc483640a23c45\",\n      \"size\": 2034237440\n    },\n    \"tokenizer.gguf\": {\n      \"sha256\": \"42c802884055f2fdd55b677c5414480a8666d1da335354ac527987f49aeac94a\",\n      \"size\": 10942400\n    },\n    \"part-01.dlc\": {\n      \"sha256\": \"b0360b06b08ae85856c748e9602bc7ca4a591b234179054b188e464010d4096e\",\n      \"size\": 111402428\n    },\n    \"part-02.dlc\": {\n      \"sha256\": \"229ad20f98f33d728de0d0d288cf75bbe78026d887d9e086152a142f8873b64b\",\n      \"size\": 117796172\n    },\n    \"part-03.dlc\": {\n      \"sha256\": \"d42cce9c0376fdeb5c33b7d69344c7ed951aff6ed98a21e776396e5711de0f3d\",\n      \"size\": 111402436\n    },\n    \"part-04.dlc\": {\n      \"sha256\": \"050860edd4bfad35bc6598ef14e1500ea5cd8592629ef213e0832296334679d7\",\n      \"size\": 117796172\n    },\n    \"part-05.dlc\": {\n      \"sha256\": \"4e4b5425dcdd5666292a6309285ddc15ecdd3d4fc211d141f63b74d811328eda\",\n      \"size\": 111402476\n    },\n    \"part-06.dlc\": {\n      \"sha256\": \"b6cbe75bc999fe23cfd8d5d3244b144e43efe8a8c9f31da1e5e812fd0c76a7f0\",\n      \"size\": 117796236\n    },\n    \"part-07.dlc\": {\n      \"sha256\": \"e77096800b6cff67aa92947f59590df5b3c765f95e5bd0b3b1c02289af7f8004\",\n      \"size\": 111402500\n    },\n    \"part-08.dlc\": {\n      \"sha256\": \"bfcefc0a0fc2fe0dbda8b7e3ad950f47f8c148673f383cf827c4b5b360dddf11\",\n      \"size\": 117796236\n    },\n    \"part-09.dlc\": {\n      \"sha256\": \"dc4a35762c40add4bb45e090b1768fedf7e3d43fb8c8a723eb6c376762311c54\",\n      \"size\": 111402484\n    },\n    \"part-10.dlc\": {\n      \"sha256\": \"ecdb3fb9d7df93612b3ffe5eb44704a8e769972afb352cb67deaa2a84a35e88d\",\n      \"size\": 117796220\n    },\n    \"part-11.dlc\": {\n      \"sha256\": \"4a8f3894df98777cda210a6e6e7a5d99915718d993bf6eea88648b4db504805c\",\n      \"size\": 111402468\n    },\n    \"head-00.dlc\": {\n      \"sha256\": \"22a8a9f2d911acc57baf250fb902a819c7f7e41663c93a49109c19eeb2240158\",\n      \"size\": 127155924\n    },\n    \"head-01.dlc\": {\n      \"sha256\": \"5fe7a9ce3913a5850973928d1a6d7d246b188f8ccd0cef16f150b906ad735045\",\n      \"size\": 127155924\n    },\n    \"head-02.dlc\": {\n      \"sha256\": \"4d6423dccb78baa1357fc57c354721334de904664cb81a8f8ab7831354653f4e\",\n      \"size\": 127155924\n    },\n    \"head-03.dlc\": {\n      \"sha256\": \"97c60ac854c8b589bf3e07387087df436cffd0887f4fee44f19c7e23d8ddf227\",\n      \"size\": 127155924\n    },\n    \"LICENSE.txt\": {\n      \"sha256\": \"c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c\",\n      \"size\": 11358\n    },\n    \"NOTICE.txt\": {\n      \"sha256\": \"b9eb1e46625628839f20df4890a6e6cdfcd1db9e7879fc6a0e93afce8216060a\",\n      \"size\": 417\n    },\n    \"conversion.json\": {\n      \"sha256\": \"bd04bb1ba69358c4b6f8ef4df3b072fc97f1ebc8f472193b01f7ffae04a3e5b3\",\n      \"size\": 3933\n    }\n  }\n}\n",
+      "manifestSha256": "82102a33c85a0ad5e84d107a4b8dc9d5df630a86c478bfa24b6acdd164056541",
+      "downloads": {
+        "part-00.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-00.dlc.part00",
+            "size": 117796172,
+            "sha256": "6bbca4325d1a4eeab11c621c01e9ab6412e672d6807b14b68ebf75b3aa141d02"
+          }
+        ],
+        "embedding.f32": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-embedding.f32.part00",
+            "size": 1000000000,
+            "sha256": "c7bcd3c549feea49ee78bf617eee2dba3c5770f91e950e486c2d2e28b5af5b5a"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-embedding.f32.part01",
+            "size": 1000000000,
+            "sha256": "bc3b3b18db4d7d61dad6c8734b690a1c846080c539c5071b39a7ec78d4bc8717"
+          },
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-embedding.f32.part02",
+            "size": 34237440,
+            "sha256": "ee681e89414b052a57bf8a5437d92137ceb60413e17f4823affce8da98145217"
+          }
+        ],
+        "tokenizer.gguf": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-tokenizer.gguf.part00",
+            "size": 10942400,
+            "sha256": "42c802884055f2fdd55b677c5414480a8666d1da335354ac527987f49aeac94a"
+          }
+        ],
+        "part-01.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-01.dlc.part00",
+            "size": 111402428,
+            "sha256": "b0360b06b08ae85856c748e9602bc7ca4a591b234179054b188e464010d4096e"
+          }
+        ],
+        "part-02.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-02.dlc.part00",
+            "size": 117796172,
+            "sha256": "229ad20f98f33d728de0d0d288cf75bbe78026d887d9e086152a142f8873b64b"
+          }
+        ],
+        "part-03.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-03.dlc.part00",
+            "size": 111402436,
+            "sha256": "d42cce9c0376fdeb5c33b7d69344c7ed951aff6ed98a21e776396e5711de0f3d"
+          }
+        ],
+        "part-04.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-04.dlc.part00",
+            "size": 117796172,
+            "sha256": "050860edd4bfad35bc6598ef14e1500ea5cd8592629ef213e0832296334679d7"
+          }
+        ],
+        "part-05.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-05.dlc.part00",
+            "size": 111402476,
+            "sha256": "4e4b5425dcdd5666292a6309285ddc15ecdd3d4fc211d141f63b74d811328eda"
+          }
+        ],
+        "part-06.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-06.dlc.part00",
+            "size": 117796236,
+            "sha256": "b6cbe75bc999fe23cfd8d5d3244b144e43efe8a8c9f31da1e5e812fd0c76a7f0"
+          }
+        ],
+        "part-07.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-07.dlc.part00",
+            "size": 111402500,
+            "sha256": "e77096800b6cff67aa92947f59590df5b3c765f95e5bd0b3b1c02289af7f8004"
+          }
+        ],
+        "part-08.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-08.dlc.part00",
+            "size": 117796236,
+            "sha256": "bfcefc0a0fc2fe0dbda8b7e3ad950f47f8c148673f383cf827c4b5b360dddf11"
+          }
+        ],
+        "part-09.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-09.dlc.part00",
+            "size": 111402484,
+            "sha256": "dc4a35762c40add4bb45e090b1768fedf7e3d43fb8c8a723eb6c376762311c54"
+          }
+        ],
+        "part-10.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-10.dlc.part00",
+            "size": 117796220,
+            "sha256": "ecdb3fb9d7df93612b3ffe5eb44704a8e769972afb352cb67deaa2a84a35e88d"
+          }
+        ],
+        "part-11.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-part-11.dlc.part00",
+            "size": 111402468,
+            "sha256": "4a8f3894df98777cda210a6e6e7a5d99915718d993bf6eea88648b4db504805c"
+          }
+        ],
+        "head-00.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-head-00.dlc.part00",
+            "size": 127155924,
+            "sha256": "22a8a9f2d911acc57baf250fb902a819c7f7e41663c93a49109c19eeb2240158"
+          }
+        ],
+        "head-01.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-head-01.dlc.part00",
+            "size": 127155924,
+            "sha256": "5fe7a9ce3913a5850973928d1a6d7d246b188f8ccd0cef16f150b906ad735045"
+          }
+        ],
+        "head-02.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-head-02.dlc.part00",
+            "size": 127155924,
+            "sha256": "4d6423dccb78baa1357fc57c354721334de904664cb81a8f8ab7831354653f4e"
+          }
+        ],
+        "head-03.dlc": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-head-03.dlc.part00",
+            "size": 127155924,
+            "sha256": "97c60ac854c8b589bf3e07387087df436cffd0887f4fee44f19c7e23d8ddf227"
+          }
+        ],
+        "LICENSE.txt": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-LICENSE.txt.part00",
+            "size": 11358,
+            "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c"
+          }
+        ],
+        "NOTICE.txt": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v1/index2-snpe-qualcomm-NOTICE.txt.part00",
+            "size": 417,
+            "sha256": "b9eb1e46625628839f20df4890a6e6cdfcd1db9e7879fc6a0e93afce8216060a"
+          }
+        ],
+        "conversion.json": [
+          {
+            "url": "https://github.com/indexix/bookrack-cdn/releases/download/index-translate-2b-npu-v2/index2-snpe-qualcomm-a8-conversion.json.part00",
+            "size": 3933,
+            "sha256": "bd04bb1ba69358c4b6f8ef4df3b072fc97f1ebc8f472193b01f7ffae04a3e5b3"
+          }
+        ]
+      }
+    }
+  ]
+}

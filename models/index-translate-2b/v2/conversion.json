@@ -1,0 +1,115 @@
+{
+  "source": "IndexTeam/Index-Translate-2B",
+  "revision": "9bc08445315723eb9b77d1b93505915eb03c3f01",
+  "architecture": "qwen3_5",
+  "sdk": "QAIRT/SNPE 2.47.0.260601",
+  "stage": "SNPE CPU-body/DSP-head hybrid conversion and physical-device generation verified",
+  "conversionVerified": true,
+  "referenceVerified": true,
+  "onDeviceVerified": true,
+  "executionPlan": {
+    "cpuDecoderPartitions": 12,
+    "layersPerCpuPartition": 2,
+    "cpuMath": "FP32 with dequantized W8 weights",
+    "dspVocabularyPartitions": 4,
+    "dspActivations": 8,
+    "allNpu": false,
+    "automaticCpuFallback": false
+  },
+  "contextTokens": 512,
+  "validationScope": "Float split-body outputs and states exactly matched six source partitions on three fixtures each. Four augmented-L2 vocabulary heads matched float references within 1.15e-5; full-vocabulary top-1 matched in three fixtures. The same DLC files completed Japanese-to-Korean and held-out English-to-Korean generation on BOOX Go103_2 / SM6350 / V66 / Android 15. English generation used this final execution plan, FP32 attention mask -10000 and 256-token output limit. Full-NPU A8 translation was inaccurate and is not distributed. Other physical devices, broad quality, long documents and a performance advantage remain unverified.",
+  "calibration": {
+    "body": "One fixture per half to quantize W8 parameters; CPU FLOAT32 does not execute quantized activations",
+    "head": "Three multilingual sequences, non-thinking official chat template, 136 total token steps; representative prompt/answer boundary samples",
+    "method": "min-max; SNPE snpe-dlc-quant binary"
+  },
+  "referenceArtifacts": {
+    "splitBody": [
+      {
+        "originalPartition": 0,
+        "fixtures": 3,
+        "hiddenAndStatesMaxAbsError": 0
+      },
+      {
+        "originalPartition": 1,
+        "fixtures": 3,
+        "hiddenAndStatesMaxAbsError": 0
+      },
+      {
+        "originalPartition": 2,
+        "fixtures": 3,
+        "hiddenAndStatesMaxAbsError": 0
+      },
+      {
+        "originalPartition": 3,
+        "fixtures": 3,
+        "hiddenAndStatesMaxAbsError": 0
+      },
+      {
+        "originalPartition": 4,
+        "fixtures": 3,
+        "hiddenAndStatesMaxAbsError": 0
+      },
+      {
+        "originalPartition": 5,
+        "fixtures": 3,
+        "hiddenAndStatesMaxAbsError": 0
+      }
+    ],
+    "headRewrite": {
+      "heads": [
+        {
+          "shard": 0,
+          "fixtures": 3,
+          "maxAbsError": 1.1444091796875e-05
+        },
+        {
+          "shard": 1,
+          "fixtures": 3,
+          "maxAbsError": 9.5367431640625e-06
+        },
+        {
+          "shard": 2,
+          "fixtures": 3,
+          "maxAbsError": 9.5367431640625e-06
+        },
+        {
+          "shard": 3,
+          "fixtures": 3,
+          "maxAbsError": 9.5367431640625e-06
+        }
+      ],
+      "fullVocabularyTop1Matched": [
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "performanceNote": "One graph resident at a time. This is a compatibility/benchmark path, not a speedup claim. Temporary-manifest Japanese fixture took about 177.5 seconds excluding preparation.",
+  "npuVerificationScope": "vocabulary projection only; decoder body executes CPU FLOAT32",
+  "deviceValidation": {
+    "device": "BOOX Go103_2",
+    "soc": "SM6350",
+    "android": 15,
+    "dsp": "V66",
+    "fixtures": [
+      {
+        "source": "今日は良い天気です。",
+        "targetLanguage": "ko",
+        "output": "오늘은 날씨가 좋네요.",
+        "attentionMaskValue": -128,
+        "translationMs": 177504
+      },
+      {
+        "source": "Thank you.",
+        "targetLanguage": "ko",
+        "output": "감사합니다.",
+        "attentionMaskValue": -10000,
+        "translationMs": 118761
+      }
+    ],
+    "appProcessPeakSampledPssKb": 1215740,
+    "memoryScope": "App process samples only, excludes separate DSP/driver allocations; Japanese fixture"
+  }
+}

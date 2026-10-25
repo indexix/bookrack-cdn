@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-25",
+  "device": {
+    "product": "BOOX Go 10.3 Gen2 (Go103_2)",
+    "android": 15,
+    "soc": "SM6350",
+    "executedDspArchitecture": "V66"
+  },
+  "sdk": "QAIRT/SNPE 2.47.0.260601",
+  "status": "Physical CPU-body/DSP-head generation and reset/repeat passed",
+  "confirmedIssues": [
+    {
+      "issue": "A16 model on A8-only DSP path",
+      "evidence": "snpeCode=1002; embedding.nfc Transpose rejects datatype 0x416"
+    },
+    {
+      "issue": "Simultaneous graph residency exhausts memory",
+      "evidence": "Android ApplicationExitInfo LOW_MEMORY"
+    },
+    {
+      "issue": "Large single vocabulary projection fails graph finalization",
+      "evidence": "QNN_GRAPH_FINALIZE_FAILED 6022; splitting into four shards executes successfully"
+    },
+    {
+      "issue": "All-A8 model executes but translation is incorrect",
+      "evidence": "L2 candidate generated Thai token 69811; preparation alone is not a quality test"
+    },
+    {
+      "issue": "Fine-grained CPU/DSP hybrid graph fails at runtime",
+      "evidence": "QNN_GRAPH_ERROR_INVALID_TENSOR 7004; not shipped"
+    },
+    {
+      "issue": "Four-layer CPU partitions in CPU-body/DSP-head experiment exceed memory budget",
+      "evidence": "Correct first three tokens; Android LOW_MEMORY at 2026-10-25 10:02:21"
+    }
+  ],
+  "implemented": [
+    "Executed A8/A16 DSP capability probes; no model-name whitelist",
+    "One partition resident at a time; persistent bounded DSP session anchor",
+    "Prompt prefill grouped by partition; CPU recurrent/KV states preserved",
+    "Contiguous vocabulary shards with shape/range validation",
+    "Explicit CPU-body/DSP-head execution plan and truthful benchmark backend scope",
+    "Return unused native allocator pages between CPU graphs"
+  ],
+  "referenceChecks": {
+    "fullFloatVsOriginal": "136 token positions in every partition; head top1 136/136",
+    "splitBodyVsOriginal": "6 original partitions x 3 nonzero-state fixtures, all hidden/state outputs exactly equal",
+    "nativeStreaming": "CPU-only synthetic regression passes; not an NPU accuracy/performance result"
+  },
+  "unverified": [
+    "Fold4 physical execution",
+    "Other Qualcomm devices",
+    "Broad translation quality",
+    "RKLLM physical execution"
+  ],
+  "successfulExecution": {
+    "executionMode": "cpu_body_dsp_head",
+    "cpuDecoderPartitions": 12,
+    "npuProjectionPartitions": 4,
+    "allNpu": false,
+    "automaticCpuFallback": false,
+    "weather": {
+      "source": "今日は良い天気です。",
+      "translation": "오늘은 날씨가 좋네요.",
+      "translationMs": 177504,
+      "temporaryAttentionMask": -128
+    },
+    "heldOutEnglish": {
+      "source": "Thank you.",
+      "translation": "감사합니다.",
+      "translationMs": 118761,
+      "repeatMs": 118380,
+      "repeatMatched": true,
+      "productionAttentionMask": -10000
+    },
+    "peakSampledAppPssKb": 1215740,
+    "memoryScope": "Sampled app process only; excludes separate DSP/driver allocations"
+  },
+  "testedBundleSha256": "175a8390077c1959b3c0de9621c3521607f94e841c7bfd230effe69aa1ba44a0",
+  "publishedBundleSha256": "82102a33c85a0ad5e84d107a4b8dc9d5df630a86c478bfa24b6acdd164056541",
+  "bundleDifference": "conversion.json provenance only; all executable model data and execution settings are identical",
+  "requiredAppVersion": "0.9.2",
+  "modelRelease": "https://github.com/indexix/bookrack-cdn/releases/tag/index-translate-2b-npu-v2"
+}

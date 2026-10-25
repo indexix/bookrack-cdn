@@ -1,0 +1,4 @@
+# Host float reference and calibration environment. The QAIRT SDK uses its own environment.
+-r requirements-snpe-export.txt
+onnxruntime==1.24.2
+transformers==5.8.0

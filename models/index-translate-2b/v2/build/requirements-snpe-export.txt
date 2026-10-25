@@ -1,0 +1,5 @@
+# Python 3.11+. QAIRT tools and RKLLM toolkit are installed separately.
+numpy==2.5.4
+onnx==1.20.1
+safetensors==0.8.0
+torch==2.10.0

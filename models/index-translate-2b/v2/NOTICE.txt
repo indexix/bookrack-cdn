@@ -1,0 +1,4 @@
+Index-Translate-2B by IndexTeam, Apache-2.0.
+Source: https://huggingface.co/IndexTeam/Index-Translate-2B/tree/9bc08445315723eb9b77d1b93505915eb03c3f01
+Text-only conversion for OCR Transer. No vision or MTP weights.
+Tokenizer metadata from IndexTeam/Index-Translate-2B-GGUF, revision 3a0eca6ce931d88d00614d427ab3ed8ff0743902. All 248077 original HF token IDs were verified against it. No GGUF weight tensors are used.

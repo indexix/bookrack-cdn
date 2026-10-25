@@ -65,3 +65,10 @@ SDK conversion from runtime execution, which requires the target hardware.
 Model weights are Apache 2.0; see [the model license](models/index-translate-2b/v1/LICENSE.txt).
 Runtime libraries are not included in model assets. Download catalogs pin every
 asset's exact length and SHA-256 digest, including files split into 1 GB pieces.
+
+
+## Index SNPE A8 hybrid (v2, experimental)
+
+[Index NPU v2](https://github.com/indexix/bookrack-cdn/releases/tag/index-translate-2b-npu-v2) adds a checksummed Index-only legacy Qualcomm profile for OCR Transer 0.9.2. It explicitly executes 12 decoder partitions on CPU FLOAT32 and four vocabulary projections on Hexagon DSP W8A8. It is not an all-NPU model or a speedup claim. The A16 and Rockchip profiles retain their previous scope and assets.
+
+BOOX Go103_2 / SM6350 / V66 / Android 15 completed Japanese and held-out English translation, including reset/repeat. Short sentences took about 2–3 minutes excluding preparation; sampled app PSS peaked near 1.16 GiB, excluding separate DSP/driver memory. Other devices, long documents and broad quality are unverified. [Validation](models/index-translate-2b/v2/validation.json), [catalog](models/index-translate-2b/v2/vendor-model-catalog.json), and [build sources](models/index-translate-2b/v2/build).
