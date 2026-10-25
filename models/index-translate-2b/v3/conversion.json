@@ -1,0 +1,92 @@
+{
+  "source": "IndexTeam/Index-Translate-2B",
+  "revision": "9bc08445315723eb9b77d1b93505915eb03c3f01",
+  "architecture": "qwen3_5",
+  "sdk": "QAIRT/SNPE 2.47.0.260601",
+  "stage": "Resident Q4 CPU body and 16 smaller DSP vocabulary shards; physical-device generation verified",
+  "conversionVerified": true,
+  "referenceVerified": true,
+  "onDeviceVerified": true,
+  "executionPlan": {
+    "cpuDecoderLayers": 24,
+    "cpuRuntime": "llama.cpp Q4_K_M",
+    "dspVocabularyPartitions": 16,
+    "dspActivations": 8,
+    "allNpu": false,
+    "automaticCpuFallback": false
+  },
+  "cpuModel": {
+    "url": "https://huggingface.co/IndexTeam/Index-Translate-2B-GGUF/resolve/3a0eca6ce931d88d00614d427ab3ed8ff0743902/Index-Translate-2B.Q4_K_M.gguf",
+    "sha256": "044b313d29342bd3b2c77cbb64023ca0d209bd9b3247763f9d162767ef2d746a",
+    "size": 1312164352,
+    "gzip": false,
+    "revision": "3a0eca6ce931d88d00614d427ab3ed8ff0743902"
+  },
+  "contextTokens": 512,
+  "calibration": {
+    "head": "Original HF head activations from three multilingual sequences / 136 token steps; official non-thinking chat template",
+    "method": "min-max; snpe-dlc-quant binary W8/A8/bias32"
+  },
+  "validationScope": "16 float rewritten head shards matched original shards within 6.2e-6 with identical full-vocabulary top-1 on three samples. Resident CPU pre-normalization body matched the original full CPU graph exactly at eight positions including reset. BOOX Go103_2 / SM6350 / V66 / Android 15 completed Japanese and English translation and repeated Japanese translation identically with bounded live graph reuse. CPU-only remains faster on this device. Other physical devices, broad translation quality, battery and long-document stress are not verified.",
+  "references": {
+    "floatHeads": {
+      "maxAbsError": 6.198883056640625e-06,
+      "samples": 3,
+      "vocabSize": 248320,
+      "top1Original": [
+        [
+          18727
+        ],
+        [
+          95879
+        ],
+        [
+          100627
+        ]
+      ],
+      "top1Rewritten": [
+        [
+          18727
+        ],
+        [
+          95879
+        ],
+        [
+          100627
+        ]
+      ]
+    },
+    "cpuBody": {
+      "hiddenSize": 2048,
+      "maxAbsError": 0.0,
+      "positions": 8,
+      "scope": "CPU-only original full graph vs external projection graph; includes reset"
+    }
+  },
+  "deviceValidation": {
+    "device": "BOOX Go103_2 / SM6350 / V66 / Android 15",
+    "ramBytes": 3618308096,
+    "peakSampledAppPssKb": 1361052,
+    "memoryScope": "App process PSS samples only; excludes separate DSP/driver allocations",
+    "fixtures": [
+      {
+        "source": "今日は良い天気です。",
+        "translation": "오늘은 날씨가 좋네요.",
+        "elapsedMs": 41520,
+        "cacheHits": 16
+      },
+      {
+        "source": "Thank you.",
+        "translation": "감사합니다.",
+        "elapsedMs": 27312,
+        "cacheHits": 8
+      },
+      {
+        "source": "今日は良い天気です。",
+        "translation": "오늘은 날씨가 좋네요.",
+        "elapsedMs": 41203,
+        "cacheHits": 14
+      }
+    ]
+  }
+}

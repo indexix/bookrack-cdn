@@ -1,0 +1,65 @@
+--- a/include/llama.h
++++ b/include/llama.h
+@@ -388,6 +388,7 @@
+ 
+         // Keep the booleans together and at the end of the struct to avoid misalignment during copy-by-value.
+         bool embeddings;  // if true, extract embeddings (together with logits)
++        bool ocr_external_projection; // OCR Transer: Qwen3.5 pre-norm hidden state only, no CPU LM head
+         bool offload_kqv; // offload the KQV ops (including the KV cache) to GPU
+         bool no_perf;     // measure performance timings
+         bool op_offload;  // offload host tensor operations to device
+--- a/src/llama-context.cpp
++++ b/src/llama-context.cpp
+@@ -114,8 +114,12 @@
+     cparams.yarn_beta_fast          = params.yarn_beta_fast   >= 0.0f ? params.yarn_beta_fast   : hparams.yarn_beta_fast;
+     cparams.yarn_beta_slow          = params.yarn_beta_slow   >= 0.0f ? params.yarn_beta_slow   : hparams.yarn_beta_slow;
+     cparams.embeddings              = params.embeddings;
+-    cparams.embeddings_nextn        = false;
+-    cparams.embeddings_nextn_masked = false;
++    cparams.ocr_external_projection = params.ocr_external_projection;
++    if (params.ocr_external_projection && model.arch != LLM_ARCH_QWEN35) {
++        throw std::runtime_error("OCR external projection requires Qwen3.5");
++    }
++    cparams.embeddings_nextn        = params.ocr_external_projection;
++    cparams.embeddings_nextn_masked = params.ocr_external_projection;
+     cparams.offload_kqv             = params.offload_kqv;
+     cparams.no_perf                 = params.no_perf;
+     cparams.warmup                  = false;
+@@ -3510,6 +3514,7 @@
+         /*.abort_callback              =*/ nullptr,
+         /*.abort_callback_data         =*/ nullptr,
+         /*.embeddings                  =*/ false,
++        /*.ocr_external_projection     =*/ false,
+         /*.offload_kqv                 =*/ true,
+         /*.no_perf                     =*/ true,
+         /*.op_offload                  =*/ true,
+--- a/src/llama-cparams.h
++++ b/src/llama-cparams.h
+@@ -32,6 +32,7 @@
+     float yarn_beta_slow;
+ 
+     bool embeddings;
++    bool ocr_external_projection;
+     bool embeddings_nextn;        // also extract the hidden state before the final output norm
+     bool embeddings_nextn_masked; // extract for only rows where batch.logits != 0
+     bool causal_attn;
+--- a/src/models/qwen35.cpp
++++ b/src/models/qwen35.cpp
+@@ -206,6 +206,17 @@
+         inpL = cur;
+     }
+     cur = inpL;
++    res->t_layer_inp[n_layer] = cur;
++
++    // The SNPE head owns the final RMS norm and vocabulary projection. Returning
++    // the pre-norm state avoids both double normalization and an unused CPU head.
++    // This opt-in graph is isolated from ordinary CPU/GPU/NPU llama.cpp decoding.
++    if (cparams.ocr_external_projection) {
++        cb(cur, "ocr_pre_projection", -1);
++        res->t_h_nextn = cur;
++        ggml_build_forward_expand(gf, cur);
++        return;
++    }
+ 
+     cur = build_norm(cur, model.output_norm, nullptr, LLM_NORM_RMS, -1);
+ 

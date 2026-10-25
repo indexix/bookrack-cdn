@@ -1,0 +1,1153 @@
+{
+  "device": {
+    "model": "BOOX Go103_2",
+    "soc": "SM6350",
+    "dsp": "V66",
+    "android": 15,
+    "ramBytes": 3618308096
+  },
+  "scope": "Same source/prompt/greedy decoding on one device; different quantization/context. App PSS excludes separate DSP/driver allocations. No battery, thermal, long-document or other-device certification.",
+  "measurements": [
+    {
+      "run": "cpu-foreground",
+      "status": "passed",
+      "prepareMs": 3798,
+      "peakSampledAppPssKb": 1440237,
+      "repeatMatched": true,
+      "cancellationCompleted": null,
+      "comparisonScope": "Same source/prompt/greedy decoding; CPU Q4_K_M context 2048 vs SNPE W8 mixed FP32/A8 context 512",
+      "translations": [
+        {
+          "source": "今日は良い天気です。",
+          "translation": "오늘은 날씨가 좋네요.",
+          "elapsedMs": 7123,
+          "performance": {
+            "promptTokens": 37,
+            "generatedTokens": 7,
+            "prefillMs": 5610.12,
+            "decodeMs": 1399.15
+          }
+        },
+        {
+          "source": "Thank you.",
+          "translation": "감사합니다.",
+          "elapsedMs": 4808,
+          "performance": {
+            "promptTokens": 34,
+            "generatedTokens": 4,
+            "prefillMs": 3968.18,
+            "decodeMs": 819.782
+          }
+        },
+        {
+          "source": "今日は良い天気です。",
+          "translation": "오늘은 날씨가 좋네요.",
+          "elapsedMs": 5734,
+          "performance": {
+            "promptTokens": 37,
+            "generatedTokens": 7,
+            "prefillMs": 4310.39,
+            "decodeMs": 1400.2
+          }
+        }
+      ]
+    },
+    {
+      "run": "snpe-baseline",
+      "status": "interrupted by Android force-stop (USER REQUESTED / FORCE STOP); not a low-memory exit",
+      "prepareMs": 28904,
+      "peakSampledAppPssKb": 1239566,
+      "repeatMatched": null,
+      "cancellationCompleted": null,
+      "comparisonScope": "Same source/prompt/greedy decoding; CPU Q4_K_M context 2048 vs SNPE W8 mixed FP32/A8 context 512",
+      "translations": [
+        {
+          "source": "今日は良い天気です。",
+          "translation": "오늘은 날씨가 좋네요.",
+          "elapsedMs": 164306,
+          "performance": {
+            "decodeMs": 115261.385945,
+            "decodeSteps": 7,
+            "graphBuilds": 128,
+            "graphCacheHits": 0,
+            "graphExecuteMs": 42823.406382,
+            "graphLoadMs": 113126.31042800001,
+            "graphUnloadMs": 8229.849632,
+            "partitions": [
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 3045.13708,
+                "executions": 44,
+                "file": "part-00.dlc",
+                "loadMs": 7407.594424,
+                "unloadMs": 665.2230739999999
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 4016.9928080000004,
+                "executions": 44,
+                "file": "part-01.dlc",
+                "loadMs": 7189.963228000001,
+                "unloadMs": 655.9970820000001
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 3033.578071,
+                "executions": 44,
+                "file": "part-02.dlc",
+                "loadMs": 7311.2154679999985,
+                "unloadMs": 607.815363
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 4025.7772979999995,
+                "executions": 44,
+                "file": "part-03.dlc",
+                "loadMs": 7019.724424000001,
+                "unloadMs": 608.858751
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 3018.784844999999,
+                "executions": 44,
+                "file": "part-04.dlc",
+                "loadMs": 7244.9808299999995,
+                "unloadMs": 611.787916
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 4001.4171850000002,
+                "executions": 44,
+                "file": "part-05.dlc",
+                "loadMs": 7063.847394,
+                "unloadMs": 613.001875
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 3042.6661410000006,
+                "executions": 44,
+                "file": "part-06.dlc",
+                "loadMs": 7360.228539000001,
+                "unloadMs": 628.7717719999999
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 3894.0646850000003,
+                "executions": 44,
+                "file": "part-07.dlc",
+                "loadMs": 7054.039110999998,
+                "unloadMs": 620.579791
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 2994.805936,
+                "executions": 44,
+                "file": "part-08.dlc",
+                "loadMs": 7377.551611999999,
+                "unloadMs": 608.546146
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 3979.7221879999997,
+                "executions": 44,
+                "file": "part-09.dlc",
+                "loadMs": 7102.951663,
+                "unloadMs": 611.879426
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 2986.716507,
+                "executions": 44,
+                "file": "part-10.dlc",
+                "loadMs": 7291.830569,
+                "unloadMs": 610.735624
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 4005.2257240000004,
+                "executions": 44,
+                "file": "part-11.dlc",
+                "loadMs": 7057.437967,
+                "unloadMs": 608.499114
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 194.16593799999995,
+                "executions": 8,
+                "file": "head-00.dlc",
+                "loadMs": 6831.749008999999,
+                "unloadMs": 220.96416799999997
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 192.51473799999997,
+                "executions": 8,
+                "file": "head-01.dlc",
+                "loadMs": 6613.548121000001,
+                "unloadMs": 188.332395
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 199.66375,
+                "executions": 8,
+                "file": "head-02.dlc",
+                "loadMs": 6583.164738,
+                "unloadMs": 194.67927
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 192.17348800000005,
+                "executions": 8,
+                "file": "head-03.dlc",
+                "loadMs": 6616.483330999999,
+                "unloadMs": 174.17786500000003
+              }
+            ],
+            "prefillMs": 48960.664617,
+            "promptTokens": 37
+          }
+        }
+      ]
+    },
+    {
+      "run": "snpe-small-stream",
+      "status": "passed",
+      "prepareMs": 15353,
+      "peakSampledAppPssKb": 1171888,
+      "repeatMatched": null,
+      "cancellationCompleted": null,
+      "comparisonScope": "Same source/prompt/greedy decoding and Q4_K_M CPU body; CPU full Q4 context 2048 vs hybrid DSP W8A8 head/context 512",
+      "translations": [
+        {
+          "source": "今日は良い天気です。",
+          "translation": "오늘은 날씨가 좋네요.",
+          "elapsedMs": 47681,
+          "performance": {
+            "cacheEvictions": 0,
+            "cachedBytesEstimate": 0,
+            "cpuBodyMs": 5368.453174,
+            "cpuBodyRuntime": "llama.cpp Q4_K_M (resident, external projection)",
+            "decodeMs": 38159.169881,
+            "decodeSteps": 7,
+            "graphBuilds": 128,
+            "graphCacheBudgetBytes": 0,
+            "graphCacheHits": 0,
+            "graphExecuteMs": 1033.356454,
+            "graphLoadMs": 36511.469465999995,
+            "graphUnloadMs": 4717.994375999999,
+            "partitions": [
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 59.816043,
+                "executions": 8,
+                "file": "head-00.dlc",
+                "loadMs": 2396.640883,
+                "unloadMs": 145.190415
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 64.46765599999999,
+                "executions": 8,
+                "file": "head-01.dlc",
+                "loadMs": 2288.708437,
+                "unloadMs": 291.950626
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 64.42364500000001,
+                "executions": 8,
+                "file": "head-02.dlc",
+                "loadMs": 2273.811509,
+                "unloadMs": 292.482656
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 65.313176,
+                "executions": 8,
+                "file": "head-03.dlc",
+                "loadMs": 2221.7963520000003,
+                "unloadMs": 315.304218
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 62.949425000000005,
+                "executions": 8,
+                "file": "head-04.dlc",
+                "loadMs": 2255.816249,
+                "unloadMs": 299.994479
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 66.93062400000001,
+                "executions": 8,
+                "file": "head-05.dlc",
+                "loadMs": 2314.0198960000002,
+                "unloadMs": 318.94395999999995
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 63.645259,
+                "executions": 8,
+                "file": "head-06.dlc",
+                "loadMs": 2294.130469,
+                "unloadMs": 290.97848899999997
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 71.54619799999999,
+                "executions": 8,
+                "file": "head-07.dlc",
+                "loadMs": 2266.2037490000002,
+                "unloadMs": 296.382138
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 63.746144,
+                "executions": 8,
+                "file": "head-08.dlc",
+                "loadMs": 2251.116457,
+                "unloadMs": 309.881458
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 63.59547,
+                "executions": 8,
+                "file": "head-09.dlc",
+                "loadMs": 2257.281353,
+                "unloadMs": 314.482448
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 63.941874000000006,
+                "executions": 8,
+                "file": "head-10.dlc",
+                "loadMs": 2282.47552,
+                "unloadMs": 313.313646
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 64.094481,
+                "executions": 8,
+                "file": "head-11.dlc",
+                "loadMs": 2330.553802,
+                "unloadMs": 288.46052099999997
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 65.064167,
+                "executions": 8,
+                "file": "head-12.dlc",
+                "loadMs": 2298.387812,
+                "unloadMs": 317.259167
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 64.90156300000001,
+                "executions": 8,
+                "file": "head-13.dlc",
+                "loadMs": 2240.026666,
+                "unloadMs": 316.61046899999997
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 65.336563,
+                "executions": 8,
+                "file": "head-14.dlc",
+                "loadMs": 2253.3644269999995,
+                "unloadMs": 311.994218
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 63.58416600000001,
+                "executions": 8,
+                "file": "head-15.dlc",
+                "loadMs": 2287.1358849999997,
+                "unloadMs": 294.765468
+              }
+            ],
+            "peakCachedGraphs": 0,
+            "prefillMs": 9479.668642,
+            "processRssSoftLimitBytes": 1610612736,
+            "projectionMs": 42270.169255999994,
+            "promptTokens": 37,
+            "systemMemoryReserveBytes": 361830809
+          }
+        }
+      ]
+    },
+    {
+      "run": "snpe-small-cache",
+      "status": "passed",
+      "prepareMs": 11486,
+      "peakSampledAppPssKb": 1361052,
+      "repeatMatched": true,
+      "cancellationCompleted": null,
+      "comparisonScope": "Same source/prompt/greedy decoding and Q4_K_M CPU body; CPU full Q4 context 2048 vs hybrid DSP W8A8 head/context 512",
+      "translations": [
+        {
+          "source": "今日は良い天気です。",
+          "translation": "오늘은 날씨가 좋네요.",
+          "elapsedMs": 41520,
+          "performance": {
+            "cacheEvictions": 2,
+            "cachedBytesEstimate": 0,
+            "cpuBodyMs": 5558.598851000001,
+            "cpuBodyRuntime": "llama.cpp Q4_K_M (resident, external projection)",
+            "decodeMs": 32337.70556,
+            "decodeSteps": 7,
+            "graphBuilds": 112,
+            "graphCacheBudgetBytes": 201326592,
+            "graphCacheHits": 16,
+            "graphExecuteMs": 973.9506219999998,
+            "graphLoadMs": 29730.300246,
+            "graphUnloadMs": 4744.392651,
+            "partitions": [
+              {
+                "builds": 0,
+                "cacheHits": 8,
+                "executeMs": 48.22078199999999,
+                "executions": 8,
+                "file": "head-00.dlc",
+                "loadMs": 0.005884,
+                "unloadMs": 23.390625
+              },
+              {
+                "builds": 0,
+                "cacheHits": 8,
+                "executeMs": 49.032030999999996,
+                "executions": 8,
+                "file": "head-01.dlc",
+                "loadMs": 0.007498999999999999,
+                "unloadMs": 56.049115
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 60.317706,
+                "executions": 8,
+                "file": "head-02.dlc",
+                "loadMs": 2160.431824,
+                "unloadMs": 179.33661500000002
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 64.261769,
+                "executions": 8,
+                "file": "head-03.dlc",
+                "loadMs": 2285.280051,
+                "unloadMs": 270.911406
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 62.28140499999999,
+                "executions": 8,
+                "file": "head-04.dlc",
+                "loadMs": 2196.813646,
+                "unloadMs": 341.624165
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 64.01578099999999,
+                "executions": 8,
+                "file": "head-05.dlc",
+                "loadMs": 2099.4347900000002,
+                "unloadMs": 308.944166
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 65.13255199999999,
+                "executions": 8,
+                "file": "head-06.dlc",
+                "loadMs": 2105.976615,
+                "unloadMs": 351.658593
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 65.03265699999999,
+                "executions": 8,
+                "file": "head-07.dlc",
+                "loadMs": 2203.216612,
+                "unloadMs": 320.511667
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 61.186927000000004,
+                "executions": 8,
+                "file": "head-08.dlc",
+                "loadMs": 2028.2717699999998,
+                "unloadMs": 361.05271000000005
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 61.500418,
+                "executions": 8,
+                "file": "head-09.dlc",
+                "loadMs": 2109.984843,
+                "unloadMs": 349.991561
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 62.601718999999996,
+                "executions": 8,
+                "file": "head-10.dlc",
+                "loadMs": 2142.182289,
+                "unloadMs": 321.50328
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 62.89791700000001,
+                "executions": 8,
+                "file": "head-11.dlc",
+                "loadMs": 2062.64026,
+                "unloadMs": 406.317238
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 61.329896,
+                "executions": 8,
+                "file": "head-12.dlc",
+                "loadMs": 2125.180103,
+                "unloadMs": 368.644739
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 62.273748999999995,
+                "executions": 8,
+                "file": "head-13.dlc",
+                "loadMs": 2023.751092,
+                "unloadMs": 364.382032
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 62.978072999999995,
+                "executions": 8,
+                "file": "head-14.dlc",
+                "loadMs": 2089.005,
+                "unloadMs": 370.175103
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 60.887240000000006,
+                "executions": 8,
+                "file": "head-15.dlc",
+                "loadMs": 2098.117968,
+                "unloadMs": 349.89963599999993
+              }
+            ],
+            "peakCachedGraphs": 2,
+            "prefillMs": 9040.860569,
+            "processRssSoftLimitBytes": 1610612736,
+            "projectionMs": 35813.418633,
+            "promptTokens": 37,
+            "systemMemoryReserveBytes": 361830809
+          }
+        },
+        {
+          "source": "Thank you.",
+          "translation": "감사합니다.",
+          "elapsedMs": 27312,
+          "performance": {
+            "cacheEvictions": 2,
+            "cachedBytesEstimate": 0,
+            "cpuBodyMs": 4521.067393,
+            "cpuBodyRuntime": "llama.cpp Q4_K_M (resident, external projection)",
+            "decodeMs": 18183.645202,
+            "decodeSteps": 4,
+            "graphBuilds": 72,
+            "graphCacheBudgetBytes": 201326592,
+            "graphCacheHits": 8,
+            "graphExecuteMs": 620.1668689999999,
+            "graphLoadMs": 18759.895516,
+            "graphUnloadMs": 3076.5521909999998,
+            "partitions": [
+              {
+                "builds": 1,
+                "cacheHits": 4,
+                "executeMs": 32.545521,
+                "executions": 5,
+                "file": "head-00.dlc",
+                "loadMs": 273.09932200000003,
+                "unloadMs": 24.297605
+              },
+              {
+                "builds": 1,
+                "cacheHits": 4,
+                "executeMs": 32.022238,
+                "executions": 5,
+                "file": "head-01.dlc",
+                "loadMs": 360.18098799999996,
+                "unloadMs": 23.717917
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 38.207657,
+                "executions": 5,
+                "file": "head-02.dlc",
+                "loadMs": 1298.703855,
+                "unloadMs": 149.473281
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 38.163071,
+                "executions": 5,
+                "file": "head-03.dlc",
+                "loadMs": 1324.343177,
+                "unloadMs": 196.655417
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 41.269166000000006,
+                "executions": 5,
+                "file": "head-04.dlc",
+                "loadMs": 1255.527447,
+                "unloadMs": 197.13724000000002
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 39.891875,
+                "executions": 5,
+                "file": "head-05.dlc",
+                "loadMs": 1326.4053119999999,
+                "unloadMs": 189.881458
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 39.559062,
+                "executions": 5,
+                "file": "head-06.dlc",
+                "loadMs": 1302.723751,
+                "unloadMs": 200.23692799999998
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 39.529270000000004,
+                "executions": 5,
+                "file": "head-07.dlc",
+                "loadMs": 1303.679167,
+                "unloadMs": 203.223854
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 40.381197,
+                "executions": 5,
+                "file": "head-08.dlc",
+                "loadMs": 1313.429844,
+                "unloadMs": 249.24698
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 39.735938000000004,
+                "executions": 5,
+                "file": "head-09.dlc",
+                "loadMs": 1270.127551,
+                "unloadMs": 200.864374
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 38.789061999999994,
+                "executions": 5,
+                "file": "head-10.dlc",
+                "loadMs": 1309.096407,
+                "unloadMs": 253.288385
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 39.064479,
+                "executions": 5,
+                "file": "head-11.dlc",
+                "loadMs": 1297.2650509999999,
+                "unloadMs": 207.291406
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 39.895834,
+                "executions": 5,
+                "file": "head-12.dlc",
+                "loadMs": 1262.714531,
+                "unloadMs": 277.300262
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 38.899687,
+                "executions": 5,
+                "file": "head-13.dlc",
+                "loadMs": 1295.4613009999998,
+                "unloadMs": 243.35734399999998
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 40.854532,
+                "executions": 5,
+                "file": "head-14.dlc",
+                "loadMs": 1271.089321,
+                "unloadMs": 262.694219
+              },
+              {
+                "builds": 5,
+                "cacheHits": 0,
+                "executeMs": 41.35827999999999,
+                "executions": 5,
+                "file": "head-15.dlc",
+                "loadMs": 1296.048491,
+                "unloadMs": 197.88552099999998
+              }
+            ],
+            "peakCachedGraphs": 2,
+            "prefillMs": 9042.274059,
+            "processRssSoftLimitBytes": 1610612736,
+            "projectionMs": 22699.950097,
+            "promptTokens": 34,
+            "systemMemoryReserveBytes": 361830809
+          }
+        },
+        {
+          "source": "今日は良い天気です。",
+          "translation": "오늘은 날씨가 좋네요.",
+          "elapsedMs": 41203,
+          "performance": {
+            "cacheEvictions": 2,
+            "cachedBytesEstimate": 0,
+            "cpuBodyMs": 5465.400882000001,
+            "cpuBodyRuntime": "llama.cpp Q4_K_M (resident, external projection)",
+            "decodeMs": 32046.411758000002,
+            "decodeSteps": 7,
+            "graphBuilds": 114,
+            "graphCacheBudgetBytes": 201326592,
+            "graphCacheHits": 14,
+            "graphExecuteMs": 968.0280120000001,
+            "graphLoadMs": 29771.045297999994,
+            "graphUnloadMs": 4471.153336,
+            "partitions": [
+              {
+                "builds": 1,
+                "cacheHits": 7,
+                "executeMs": 48.062501,
+                "executions": 8,
+                "file": "head-00.dlc",
+                "loadMs": 241.12484300000006,
+                "unloadMs": 41.715782
+              },
+              {
+                "builds": 1,
+                "cacheHits": 7,
+                "executeMs": 48.26348899999999,
+                "executions": 8,
+                "file": "head-01.dlc",
+                "loadMs": 226.19010400000005,
+                "unloadMs": 44.590469
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 61.245467,
+                "executions": 8,
+                "file": "head-02.dlc",
+                "loadMs": 2199.082864,
+                "unloadMs": 193.098074
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 61.86625000000001,
+                "executions": 8,
+                "file": "head-03.dlc",
+                "loadMs": 2279.690155,
+                "unloadMs": 308.137447
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 59.534895999999996,
+                "executions": 8,
+                "file": "head-04.dlc",
+                "loadMs": 2049.76302,
+                "unloadMs": 294.91026200000005
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 61.954584,
+                "executions": 8,
+                "file": "head-05.dlc",
+                "loadMs": 2084.004272,
+                "unloadMs": 293.65823
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 59.259426000000005,
+                "executions": 8,
+                "file": "head-06.dlc",
+                "loadMs": 1993.2439570000001,
+                "unloadMs": 275.777135
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 64.016197,
+                "executions": 8,
+                "file": "head-07.dlc",
+                "loadMs": 2017.4505199999999,
+                "unloadMs": 295.16979299999997
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 61.897449,
+                "executions": 8,
+                "file": "head-08.dlc",
+                "loadMs": 2144.095936,
+                "unloadMs": 295.57223799999997
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 62.19953,
+                "executions": 8,
+                "file": "head-09.dlc",
+                "loadMs": 2157.825154,
+                "unloadMs": 332.05609300000003
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 62.38880099999999,
+                "executions": 8,
+                "file": "head-10.dlc",
+                "loadMs": 2059.240935,
+                "unloadMs": 374.407083
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 61.949425000000005,
+                "executions": 8,
+                "file": "head-11.dlc",
+                "loadMs": 2104.085,
+                "unloadMs": 352.15875
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 66.695104,
+                "executions": 8,
+                "file": "head-12.dlc",
+                "loadMs": 2087.078176,
+                "unloadMs": 353.57302200000004
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 64.94395700000001,
+                "executions": 8,
+                "file": "head-13.dlc",
+                "loadMs": 2065.2202589999997,
+                "unloadMs": 314.498959
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 59.645624,
+                "executions": 8,
+                "file": "head-14.dlc",
+                "loadMs": 2065.596146,
+                "unloadMs": 332.203176
+              },
+              {
+                "builds": 8,
+                "cacheHits": 0,
+                "executeMs": 64.105312,
+                "executions": 8,
+                "file": "head-15.dlc",
+                "loadMs": 1997.353957,
+                "unloadMs": 369.62682299999994
+              }
+            ],
+            "peakCachedGraphs": 2,
+            "prefillMs": 8977.602966,
+            "processRssSoftLimitBytes": 1610612736,
+            "projectionMs": 35550.104934,
+            "promptTokens": 37,
+            "systemMemoryReserveBytes": 361830809
+          }
+        }
+      ]
+    },
+    {
+      "run": "snpe-small-long",
+      "status": "passed",
+      "prepareMs": 12926,
+      "peakSampledAppPssKb": 1411584,
+      "repeatMatched": null,
+      "cancellationCompleted": true,
+      "comparisonScope": "Same source/prompt/greedy decoding and Q4_K_M CPU body; CPU full Q4 context 2048 vs hybrid DSP W8A8 head/context 512",
+      "translations": [
+        {
+          "source": "明日の朝、駅で会いましょう。電車に乗る前に、切符を買ってください。",
+          "translation": "내일 아침에 기차역에서 만나죠. 기차에 타기 전에 표를 사세요.",
+          "elapsedMs": 106248,
+          "performance": {
+            "cacheEvictions": 3,
+            "cachedBytesEstimate": 0,
+            "cpuBodyMs": 12141.287912000002,
+            "cpuBodyRuntime": "llama.cpp Q4_K_M (resident, external projection)",
+            "decodeMs": 93970.44824900001,
+            "decodeSteps": 22,
+            "graphBuilds": 302,
+            "graphCacheBudgetBytes": 201326592,
+            "graphCacheHits": 66,
+            "graphExecuteMs": 2726.3369420000004,
+            "graphLoadMs": 78247.84683,
+            "graphUnloadMs": 11777.786354,
+            "partitions": [
+              {
+                "builds": 1,
+                "cacheHits": 22,
+                "executeMs": 136.15947799999998,
+                "executions": 23,
+                "file": "head-00.dlc",
+                "loadMs": 200.47218900000001,
+                "unloadMs": 45.543385
+              },
+              {
+                "builds": 1,
+                "cacheHits": 22,
+                "executeMs": 131.73104200000003,
+                "executions": 23,
+                "file": "head-01.dlc",
+                "loadMs": 257.8783839999999,
+                "unloadMs": 30.546927
+              },
+              {
+                "builds": 1,
+                "cacheHits": 22,
+                "executeMs": 138.16656200000003,
+                "executions": 23,
+                "file": "head-02.dlc",
+                "loadMs": 392.47369799999996,
+                "unloadMs": 24.011927
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 167.167034,
+                "executions": 23,
+                "file": "head-03.dlc",
+                "loadMs": 6201.162028000001,
+                "unloadMs": 549.7208859999998
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 188.18244799999997,
+                "executions": 23,
+                "file": "head-04.dlc",
+                "loadMs": 6040.129945999999,
+                "unloadMs": 788.7378659999999
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 182.95093899999995,
+                "executions": 23,
+                "file": "head-05.dlc",
+                "loadMs": 6105.266818999999,
+                "unloadMs": 925.6310430000002
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 170.56343800000005,
+                "executions": 23,
+                "file": "head-06.dlc",
+                "loadMs": 5783.8888,
+                "unloadMs": 821.4017710000002
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 172.126667,
+                "executions": 23,
+                "file": "head-07.dlc",
+                "loadMs": 5862.142916000002,
+                "unloadMs": 802.8523980000001
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 175.72349200000002,
+                "executions": 23,
+                "file": "head-08.dlc",
+                "loadMs": 5765.002597,
+                "unloadMs": 866.5134880000003
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 176.90624800000006,
+                "executions": 23,
+                "file": "head-09.dlc",
+                "loadMs": 5846.820102,
+                "unloadMs": 957.2225019999998
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 177.54901300000003,
+                "executions": 23,
+                "file": "head-10.dlc",
+                "loadMs": 5949.827340999999,
+                "unloadMs": 950.5174480000002
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 185.689168,
+                "executions": 23,
+                "file": "head-11.dlc",
+                "loadMs": 5972.141505999999,
+                "unloadMs": 987.7118740000001
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 183.31156299999998,
+                "executions": 23,
+                "file": "head-12.dlc",
+                "loadMs": 6051.102756,
+                "unloadMs": 1014.9163010000001
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 178.78833600000002,
+                "executions": 23,
+                "file": "head-13.dlc",
+                "loadMs": 6048.993849999999,
+                "unloadMs": 986.744684
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 180.70838800000004,
+                "executions": 23,
+                "file": "head-14.dlc",
+                "loadMs": 5825.707496,
+                "unloadMs": 964.655518
+              },
+              {
+                "builds": 23,
+                "cacheHits": 0,
+                "executeMs": 180.61312600000002,
+                "executions": 23,
+                "file": "head-15.dlc",
+                "loadMs": 5944.836401999998,
+                "unloadMs": 1061.058336
+              }
+            ],
+            "peakCachedGraphs": 3,
+            "prefillMs": 12039.507182,
+            "processRssSoftLimitBytes": 1610612736,
+            "projectionMs": 93850.42449299998,
+            "promptTokens": 51,
+            "systemMemoryReserveBytes": 361830809
+          }
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "nativeCachePressureResetCancellation": "passed",
+    "bodyParity": {
+      "hiddenSize": 2048,
+      "maxAbsError": 0.0,
+      "positions": 8,
+      "scope": "CPU-only original full graph vs external projection graph; includes reset"
+    },
+    "floatHeads": {
+      "maxAbsError": 6.198883056640625e-06,
+      "samples": 3,
+      "vocabSize": 248320,
+      "top1Original": [
+        [
+          18727
+        ],
+        [
+          95879
+        ],
+        [
+          100627
+        ]
+      ],
+      "top1Rewritten": [
+        [
+          18727
+        ],
+        [
+          95879
+        ],
+        [
+          100627
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Index-Translate-2B by IndexTeam, Apache-2.0.
+Source: https://huggingface.co/IndexTeam/Index-Translate-2B/tree/9bc08445315723eb9b77d1b93505915eb03c3f01
+Text-only vocabulary head conversion for OCR Transer. No vision or MTP weights.
+16 DSP W8A8 vocabulary shards include final RMS norm.
+Tokenizer metadata from IndexTeam/Index-Translate-2B-GGUF, revision 3a0eca6ce931d88d00614d427ab3ed8ff0743902.
+The CPU body is downloaded separately from that same GGUF repository revision: Index-Translate-2B.Q4_K_M.gguf, SHA-256 044b313d29342bd3b2c77cbb64023ca0d209bd9b3247763f9d162767ef2d746a.
+This is explicit CPU/NPU hybrid execution; only the vocabulary projection uses the DSP.
