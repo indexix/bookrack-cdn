@@ -1,3 +1,5 @@
+> Runtime update: the initially recorded graph-cache implementation later failed LOW_MEMORY checks and was rejected. Use the [validated batched runtime integration](INTEGRATION-UPDATE.md) and [final validation records](validation-final.json). Model bytes and the original v3 tag are unchanged.
+
 # Index A8 hybrid v3 (OCR Transer 0.9.3+)
 
 This profile keeps the pinned Q4_K_M decoder body on CPU and runs 16 small W8A8 final-normalization/vocabulary shards on Qualcomm DSP. It is not full-model NPU execution. SHA-256-verified CPU weights are fetched separately from the pinned official GGUF URL in conversion.json, or reused from the app's existing CPU model store.
